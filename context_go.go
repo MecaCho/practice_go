@@ -34,6 +34,7 @@ func doStuff(ctx context.Context) {
 }
 
 func main() {
+	
 	logg = log.New(os.Stdout, "", log.Ltime)
 	someHandler()
 	logg.Printf("down")
