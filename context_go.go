@@ -5,6 +5,8 @@ import (
 	"log"
 	"os"
 	"time"
+	_ "net/http/pprof"
+	"net/http"
 )
 
 var logg *log.Logger
@@ -34,7 +36,11 @@ func doStuff(ctx context.Context) {
 }
 
 func main() {
-	
+
+	go func() {
+		log.Println(http.ListenAndServe("127.0.0.1:6060", nil))
+	}()
+
 	logg = log.New(os.Stdout, "", log.Ltime)
 	someHandler()
 	logg.Printf("down")
