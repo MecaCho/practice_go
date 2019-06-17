@@ -7,6 +7,7 @@ import (
 	"time"
 	_ "net/http/pprof"
 	"net/http"
+	"fmt"
 )
 
 var logg *log.Logger
@@ -23,6 +24,14 @@ func someHandler() {
 
 //每1秒work一下，同时会判断ctx是否被取消了，如果是就退出
 func doStuff(ctx context.Context) {
+	sil := []int{1, 2, 3}
+	a := 1
+	a++
+	a--
+	if true {
+		fmt.Println(sil)
+	}
+
 	for {
 		time.Sleep(1 * time.Second)
 		select {
