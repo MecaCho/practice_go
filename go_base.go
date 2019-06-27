@@ -24,6 +24,11 @@ func main(){
 	//
 	deferTest()
 
+	//
+	mapTest()
+
+	//
+
 	defer fmt.Println("123")
 	defer fmt.Println("456")
 	nodeList := make([]Node, 10)
@@ -53,9 +58,12 @@ func deferTest()  {
 }
 
 func mapTest()  {
+	fmt.Println("test map test, ")
 
-	hashmap := map[]string
-	
+	var hashmap map[string]string
+	hashmap["qwq"] = "test_map"
+	fmt.Println(hashmap["qwq"])
+
 
 }
 
@@ -67,8 +75,15 @@ func proc()  {
 
 func sliceTest()  {
 	s := make([]int, 5)
+	fmt.Printf("slice len: %d, cap: %d\n", len(s), cap(s))
 	s = append(s, 1, 2, 3)
+	fmt.Printf("slice len: %d, cap: %d", len(s), cap(s))
 	fmt.Println(s)
+
+	s = make([]int, 5, 6)
+	fmt.Printf("slice len: %d, cap: %d\n", len(s), cap(s))
+	s = append(s, 1, 2, 3)
+	fmt.Printf("slice len: %d, cap: %d\n", len(s), cap(s))
 
 }
 
