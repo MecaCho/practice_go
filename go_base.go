@@ -97,3 +97,30 @@ func reverseList(head *Node) *Node {
 	return tmp
 
 }
+
+func Demo(){
+	var sli []string
+	abc := append(sli, "abc")
+	fmt.Println(abc)
+
+	var i *int
+
+	i = new(int)
+
+	*i = 10
+	fmt.Println(*i)
+
+	type Entity struct {
+		Desc string `json:"desc"`
+	}
+
+	testMap := make(map[string]Entity, 0)
+
+	testMap["qwq"] = Entity{Desc: "This is a test"}
+
+	fmt.Println(testMap["qwq"].Desc)
+
+	var testMap1 map[string]Entity
+
+	testMap1["qwq"] = Entity{Desc: "test"}
+}
