@@ -1,17 +1,45 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	_ "GoLab/leetcode"
+	"GoLab/leetcode"
+	"sync"
+)
 
 type Node struct {
 	value int
 	next  *Node
 }
 
+func init() {
+	fmt.Println("hello world.")
+}
+
+func init() {
+	fmt.Println("two init.")
+}
 
 
 func main(){
 	//
 	sliceTest()
+	leetcode.GetCode()
+	leetcode.AddTest()
+	leetcode.InitChannel()
+	leetcode.PrintSlice()
+	leetcode.PrintPnic()
+	leetcode.PrintMap()
+	leetcode.PrintSort()
+	leetcode.Run()
+
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		leetcode.InitContext()
+	}()
+	wg.Wait()
 
 	defer func() {
 		fmt.Println("recover")
