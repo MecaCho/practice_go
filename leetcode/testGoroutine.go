@@ -26,7 +26,7 @@ func Produce2(ch chan int, done chan bool)  {
 			ch <- i
 			i++
 			fmt.Println("Produce2 channel, ---->", i)
-			if i > 100{
+			if i > 10{
 				done <- true
 				break
 			}

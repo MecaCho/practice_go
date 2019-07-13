@@ -32,6 +32,7 @@ func main(){
 	leetcode.PrintMap()
 	leetcode.PrintSort()
 	leetcode.Run()
+	leetcode.RunPrint()
 
 	var wg sync.WaitGroup
 	wg.Add(1)
