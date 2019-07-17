@@ -22,7 +22,7 @@ func Produce2(ch chan int, done chan bool)  {
 	i := 0
 	go func(int) {
 		for {
-			time.Sleep(1 * time.Second)
+			time.Sleep(100 * time.Millisecond)
 			ch <- i
 			i++
 			fmt.Println("Produce2 channel, ---->", i)

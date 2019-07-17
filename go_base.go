@@ -33,6 +33,7 @@ func main(){
 	leetcode.PrintSort()
 	leetcode.Run()
 	leetcode.RunPrint()
+	leetcode.PrintAnonymousFunc()
 
 	var wg sync.WaitGroup
 	wg.Add(1)
