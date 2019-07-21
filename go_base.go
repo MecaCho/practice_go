@@ -5,6 +5,7 @@ import (
 	_ "GoLab/leetcode"
 	"GoLab/leetcode"
 	"sync"
+	"GoLab/channel"
 )
 
 type Node struct {
@@ -34,6 +35,13 @@ func main(){
 	leetcode.Run()
 	leetcode.RunPrint()
 	leetcode.PrintAnonymousFunc()
+
+	//leetcode.BufferChannel()
+	//leetcode.WithoutBufferChannel()
+
+	//channel.SendNilChannel()
+	channel.ReadCloseChannel()
+	leetcode.InitSlice()
 
 	var wg sync.WaitGroup
 	wg.Add(1)
