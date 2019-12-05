@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cff93e78-63c0-4101-b3e7-197006aa138b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go_reflect/go_reflect.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go_reflect/go_reflect_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gointerface/go_interface.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gointerface/go_interface_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gopoint/go_pointer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gopoint/go_pointer_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_string.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_string.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,20 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="go_base.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go_base.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="go_string.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/go_string.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding>
                 <element signature="e#14#42#0" expanded="true" />
               </folding>
@@ -43,20 +30,35 @@
       <file leaf-file-name="go_interface.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gointerface/go_interface.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="75">
               <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-              <folding>
-                <element signature="e#21#63#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="go_interface_test.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="go_interface_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gointerface/go_interface_test.go">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="go_pointer.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gopoint/go_pointer.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="go_pointer_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gopoint/go_pointer_test.go">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -64,7 +66,7 @@
       <file leaf-file-name="glog.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../github.com/golang/glog/glog.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1118">
+            <state relative-caret-position="3330">
               <caret line="238" column="5" selection-start-line="238" selection-start-column="5" selection-end-line="238" selection-end-column="5" />
             </state>
           </provider>
@@ -73,7 +75,7 @@
       <file leaf-file-name="io.go" pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/go/src/io/io.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
+            <state relative-caret-position="1155">
               <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
               <folding>
                 <element signature="e#640#660#0" expanded="true" />
@@ -86,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/go_reflect/go_reflect.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding>
                 <element signature="e#20#48#0" expanded="true" />
               </folding>
@@ -108,15 +110,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="12" selection-start-column="12" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="initSlice.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leetcode/initSlice.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -175,6 +168,8 @@
         <option value="$PROJECT_DIR$/go_reflect/interface.go" />
         <option value="$PROJECT_DIR$/gointerface/go_interface_test.go" />
         <option value="$PROJECT_DIR$/gointerface/go_interface.go" />
+        <option value="$PROJECT_DIR$/gopoint/go_pointer_test.go" />
+        <option value="$PROJECT_DIR$/gopoint/go_pointer.go" />
       </list>
     </option>
   </component>
@@ -201,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,10 +223,16 @@
               <item name="go_practice" type="462c0819:PsiDirectoryNode" />
               <item name="gointerface" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="go_practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go_practice" type="462c0819:PsiDirectoryNode" />
+              <item name="gopoint" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,7 +262,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestInterfacer in go_practice/gointerface">
+  <component name="RunManager" selected="Go Test.TestPointer in go_practice/gopoint">
     <configuration name="go build context_go.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="GoLab" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -277,15 +277,6 @@
       <go_parameters value="-i" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/go_base.go" />
-      <directory value="$PROJECT_DIR$/" />
-    </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="GoLab" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="GoLab" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="TestInterfaceReflect in go_practice/go_reflect" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -310,20 +301,31 @@
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestInterfacer$" />
     </configuration>
+    <configuration name="TestPointer in go_practice/gopoint" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="GoLab" />
+      <working_directory value="$PROJECT_DIR$/gopoint" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go_practice/gopoint" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestPointer$" />
+    </configuration>
     <list>
-      <item itemvalue="Go Build.go build main.go" />
       <item itemvalue="Go Build.go build context_go.go" />
       <item itemvalue="Go Build.go build go_base.go" />
       <item itemvalue="Go Test.TestInterfaceReflect in go_practice/go_reflect" />
       <item itemvalue="Go Test.TestInterfacer in go_practice/gointerface" />
+      <item itemvalue="Go Test.TestPointer in go_practice/gopoint" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestPointer in go_practice/gopoint" />
         <item itemvalue="Go Test.TestInterfacer in go_practice/gointerface" />
         <item itemvalue="Go Test.TestInterfaceReflect in go_practice/go_reflect" />
         <item itemvalue="Go Build.go build go_base.go" />
         <item itemvalue="Go Build.go build context_go.go" />
-        <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -334,14 +336,29 @@
     <history-entry file="TestInterfacer_in_go_practice_gointerface - 2019.12.05 at 20h 54m 41s.xml">
       <configuration name="TestInterfacer in go_practice/gointerface" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="TestPointer_in_go_practice_gopoint - 2019.12.05 at 23h 20m 46s.xml">
+      <configuration name="TestPointer in go_practice/gopoint" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestPointer_in_go_practice_gopoint - 2019.12.05 at 23h 23m 26s.xml">
+      <configuration name="TestPointer in go_practice/gopoint" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestPointer_in_go_practice_gopoint - 2019.12.05 at 23h 26m 57s.xml">
+      <configuration name="TestPointer in go_practice/gopoint" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestPointer_in_go_practice_gopoint - 2019.12.05 at 23h 27m 52s.xml">
+      <configuration name="TestPointer in go_practice/gopoint" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestPointer_in_go_practice_gopoint - 2019.12.05 at 23h 28m 48s.xml">
+      <configuration name="TestPointer in go_practice/gopoint" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1594" height="954" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22487113" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22744845" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
@@ -367,20 +384,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/go/src/context/context.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4650">
-          <caret line="310" column="20" selection-start-line="310" selection-start-column="10" selection-end-line="310" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/context/x_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/go_regex.go">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -634,9 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="e#20#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,9 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="e#18#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -688,7 +685,7 @@
     <entry file="file://$PROJECT_DIR$/go_string.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
             <element signature="e#14#42#0" expanded="true" />
           </folding>
@@ -697,7 +694,7 @@
     </entry>
     <entry file="file:///usr/local/go/src/io/io.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
+        <state relative-caret-position="1155">
           <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
           <folding>
             <element signature="e#640#660#0" expanded="true" />
@@ -707,7 +704,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../github.com/golang/glog/glog.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1118">
+        <state relative-caret-position="3330">
           <caret line="238" column="5" selection-start-line="238" selection-start-column="5" selection-end-line="238" selection-end-column="5" />
         </state>
       </provider>
@@ -715,7 +712,7 @@
     <entry file="file://$PROJECT_DIR$/go_reflect/go_reflect.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
             <element signature="e#20#48#0" expanded="true" />
           </folding>
@@ -731,18 +728,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gointerface/go_interface.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="75">
           <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#21#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gointerface/go_interface_test.go">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gopoint/go_pointer_test.go">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gopoint/go_pointer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
         </state>
       </provider>
     </entry>
