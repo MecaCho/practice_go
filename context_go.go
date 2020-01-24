@@ -2,12 +2,12 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
+	"net/http"
+	_ "net/http/pprof"
 	"os"
 	"time"
-	_ "net/http/pprof"
-	"net/http"
-	"fmt"
 )
 
 var logg *log.Logger

@@ -1,12 +1,13 @@
 package leetcode
+
 import "fmt"
 
-func ff()  (int, int) {
+func ff() (int, int) {
 	return 0, 1
 
 }
 
-func ArgsInit()  {
+func ArgsInit() {
 
 	x := 0
 	//x, _ := ff()

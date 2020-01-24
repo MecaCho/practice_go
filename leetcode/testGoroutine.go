@@ -1,14 +1,14 @@
 package leetcode
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
-func Produce1(ch chan int)  {
+func Produce1(ch chan int) {
 
 	go func() {
-		for i := 0; i < 10; i++{
+		for i := 0; i < 10; i++ {
 			time.After(1 * time.Second)
 			ch <- i
 			fmt.Println("Produce1 channel, ---->", i)
@@ -17,7 +17,7 @@ func Produce1(ch chan int)  {
 
 }
 
-func Produce2(ch chan int, done chan bool)  {
+func Produce2(ch chan int, done chan bool) {
 
 	i := 0
 	go func(int) {
@@ -26,7 +26,7 @@ func Produce2(ch chan int, done chan bool)  {
 			ch <- i
 			i++
 			fmt.Println("Produce2 channel, ---->", i)
-			if i > 10{
+			if i > 10 {
 				done <- true
 				break
 			}
@@ -35,21 +35,19 @@ func Produce2(ch chan int, done chan bool)  {
 
 }
 
-func Consumer(ch chan int, done chan bool){
+func Consumer(ch chan int, done chan bool) {
 
-	for{
+	for {
 		select {
-		case v, ok := <- ch:
+		case v, ok := <-ch:
 			fmt.Println("consume channel : ---------------", v, ok)
-		case <- done:
+		case <-done:
 			return
-		//default:
-		//	fmt.Println("channel not found.", time.Now())
+			//default:
+			//	fmt.Println("channel not found.", time.Now())
 			//break
 		}
 	}
-
-
 
 }
 

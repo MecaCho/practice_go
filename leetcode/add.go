@@ -10,12 +10,11 @@ func add(args ...int) int {
 	fmt.Println("add int : ", args, ", sum : ", sum)
 	return sum
 }
-func AddTest()  {
+func AddTest() {
 
-	add(3,4 )
+	add(3, 4)
 	add(5, 6, 7)
 	//add([]int{3, 4})
 	add([]int{5, 6, 7}...)
 
 }
-

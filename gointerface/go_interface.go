@@ -1,10 +1,10 @@
 package gointerface
 
 import (
-	"os"
 	"fmt"
+	"os"
 )
 
-func Interfacer()  {
+func Interfacer() {
 	fmt.Println(os.Getwd())
 }

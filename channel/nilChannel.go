@@ -3,25 +3,24 @@ package channel
 import "fmt"
 
 ////A1. 对一个 nil channel执行发送操作会一直阻塞。
-func SendNilChannel()  {
+func SendNilChannel() {
 	var ch chan int
 	ch <- 1
-	<- ch
+	<-ch
 }
 
-
 ////A2. 对一个 nil channel执行接受操作会一直阻塞。
-func ReadNilChannel()  {
+func ReadNilChannel() {
 	var ch chan int
-	<- ch
+	<-ch
 }
 
 //A3. 发送到关闭的channel会引起panic
-func SendCloseChannel()  {
+func SendCloseChannel() {
 
 	ch := make(chan int, 1)
 	ch <- 0
-	fmt.Println("SendCloseChannel", <- ch)
+	fmt.Println("SendCloseChannel", <-ch)
 
 	close(ch)
 
@@ -30,14 +29,13 @@ func SendCloseChannel()  {
 }
 
 //A4. 从关闭的cannel读操作，会立刻返回数据0值。
-func ReadCloseChannel()  {
+func ReadCloseChannel() {
 	ch := make(chan int, 1)
 	ch <- 0
- 	fmt.Println("ReadCloseChannel", <- ch)
+	fmt.Println("ReadCloseChannel", <-ch)
 
 	close(ch)
 
 	fmt.Println(<-ch)
 
 }
-

@@ -2,7 +2,7 @@ package leetcode
 
 import "fmt"
 
-func PrintAnonymousFunc()  {
+func PrintAnonymousFunc() {
 
 	fmt.Println("\ntest anonymousFunc: ")
 
@@ -23,7 +23,6 @@ func PrintAnonymousFunc()  {
 
 	fmt.Println(a)
 	fmt.Println(b)
-
 
 }
 

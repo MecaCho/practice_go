@@ -1,14 +1,15 @@
 package leetcode
+
 import "fmt"
 
-func InitChannel()  {
+func InitChannel() {
 	var ch chan int
 	ch1 := make(chan int)
 	go func() {
 		ch1 <- 1
 	}()
 
-	fmt.Println("read channel without buffer : ", <- ch1)
+	fmt.Println("read channel without buffer : ", <-ch1)
 
 	//go func() {
 	//	ch <- 1
@@ -20,4 +21,3 @@ func InitChannel()  {
 	//close(ch)
 	//close(ch1)
 }
-

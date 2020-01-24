@@ -1,8 +1,8 @@
 package main
 
 import (
-	"regexp"
 	"fmt"
+	"regexp"
 )
 
 /*
@@ -320,8 +320,6 @@ Yi                      彝文
 */
 
 func RegDemo() {
-
-
 
 	text := `Hello 世界！123 Go.`
 

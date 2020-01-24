@@ -1,14 +1,14 @@
 package go_reflect
 
 import (
-	"reflect"
 	"fmt"
+	"reflect"
 )
 
 type Book struct {
-	Id    int
-	Title string
-	Price float32
+	Id      int
+	Title   string
+	Price   float32
 	Authors []string
 }
 
@@ -20,6 +20,6 @@ func InterfaceReflect() {
 		varName := e.Type().Field(i).Name
 		varType := e.Type().Field(i).Type
 		varValue := e.Field(i).Interface()
-		fmt.Printf("%v %v %v\n", varName,varType,varValue)
+		fmt.Printf("%v %v %v\n", varName, varType, varValue)
 	}
 }

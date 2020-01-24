@@ -6,16 +6,15 @@ import (
 )
 
 type Node struct {
-	Name string
+	Name   string
 	memory int
 }
 
-func (n Node) String() string{
+func (n Node) String() string {
 	return fmt.Sprintf("Name: %s, memory: %d.", n.Name, n.memory)
 }
 
-func SortNodes()  {
-
+func SortNodes() {
 	type NodeList []Node
 
 	nodes := []Node{
@@ -27,4 +26,3 @@ func SortNodes()  {
 	sort.Sort(nodes)
 
 }
-

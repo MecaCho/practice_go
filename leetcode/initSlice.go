@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func InitSlice()  {
+func InitSlice() {
 
 	var a []int
 	fmt.Println("Slice init : ", a, len(a), cap(a))
@@ -23,4 +23,3 @@ func InitSlice()  {
 	time.Now()
 
 }
-

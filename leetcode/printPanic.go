@@ -25,7 +25,7 @@ func PrintPnic() {
 	//f2-begin
 	//f1-begin
 	defer func() {
-		if err := recover(); err != nil{
+		if err := recover(); err != nil {
 			fmt.Println(err)
 		}
 	}()

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
-	_ "GoLab/leetcode"
-	"GoLab/leetcode"
-	"sync"
 	"GoLab/channel"
+	"GoLab/leetcode"
+	_ "GoLab/leetcode"
+	"fmt"
+	"sync"
 )
 
 type Node struct {
@@ -21,9 +21,7 @@ func init() {
 	fmt.Println("two init.")
 }
 
-
-func main(){
-	//
+func main() {
 	sliceTest()
 	leetcode.GetCode()
 	leetcode.AddTest()
@@ -53,7 +51,7 @@ func main(){
 
 	defer func() {
 		fmt.Println("recover")
-		if err := recover();err != nil {
+		if err := recover(); err != nil {
 			fmt.Println(err)
 		}
 		fmt.Println("ok")
@@ -71,21 +69,21 @@ func main(){
 	defer fmt.Println("456")
 	nodeList := make([]Node, 10)
 	for i := 0; i < 9; i++ {
-	nodeList[i].value = i
+		nodeList[i].value = i
 
-	nodeList[i].next = &nodeList[i+1]
+		nodeList[i].next = &nodeList[i+1]
 	}
 	nodeList[9].value = 9
 	//var node Node
 	for i, node := range nodeList {
-	fmt.Println(i, node.value)
+		fmt.Println(i, node.value)
 	}
 	//reverseList(*nodeList)
-//node.next
+	//node.next
 
 }
 
-func deferTest()  {
+func deferTest() {
 
 	defer fmt.Println("abc")
 
@@ -95,23 +93,21 @@ func deferTest()  {
 
 }
 
-func mapTest()  {
+func mapTest() {
 	fmt.Println("test map test, ")
 
 	var hashmap map[string]string
 	hashmap["qwq"] = "test_map"
 	fmt.Println(hashmap["qwq"])
 
-
 }
 
-
-func proc()  {
+func proc() {
 	panic("panic test.")
 
 }
 
-func sliceTest()  {
+func sliceTest() {
 	s := make([]int, 5)
 	fmt.Printf("slice len: %d, cap: %d\n", len(s), cap(s))
 	s = append(s, 1, 2, 3)
@@ -136,7 +132,7 @@ func reverseList(head *Node) *Node {
 
 }
 
-func Demo(){
+func Demo() {
 	var sli []string
 	abc := append(sli, "abc")
 	fmt.Println(abc)

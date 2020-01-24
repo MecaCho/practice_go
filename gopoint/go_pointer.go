@@ -4,16 +4,16 @@ import "fmt"
 
 type Group struct {
 	Name string
-	ID int64
+	ID   int64
 }
 
 type User struct {
-	Name string
-	Group *Group
+	Name   string
+	Group  *Group
 	Group1 Group
 }
 
-func Pointer()  {
+func Pointer() {
 	var user User
 	user.Name = "test_user"
 	var group Group
@@ -23,15 +23,12 @@ func Pointer()  {
 	fmt.Printf("user : %+v, group: %+v, group1: %+v.", user, user.Group, user.Group1)
 }
 
-func ChangePointer(user User)  {
+func ChangePointer(user User) {
 	user.Group.Name = "test_name"
 	user.Group.ID = int64(1)
 }
 
-func ChangeGroup(user User)  {
+func ChangeGroup(user User) {
 	user.Group1.Name = "test_name"
 	user.Group1.ID = int64(1)
 }
-
-
-
