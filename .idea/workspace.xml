@@ -2,31 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cff93e78-63c0-4101-b3e7-197006aa138b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/algorithms/sortLib.go" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/sortLib.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/rune.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/rune.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/字符数组.go" beforeDir="false" afterPath="$PROJECT_DIR$/basic/字符数组.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/channel/nilChannel.go" beforeDir="false" afterPath="$PROJECT_DIR$/channel/nilChannel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/closure/go_closure.go" beforeDir="false" afterPath="$PROJECT_DIR$/closure/go_closure.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/context_go.go" beforeDir="false" afterPath="$PROJECT_DIR$/context_go.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_base.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_base.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_reflect/go_reflect.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_reflect/go_reflect.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_regex.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_regex.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_string.go" beforeDir="false" afterPath="$PROJECT_DIR$/go_string.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gointerface/go_interface.go" beforeDir="false" afterPath="$PROJECT_DIR$/gointerface/go_interface.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gopoint/go_pointer.go" beforeDir="false" afterPath="$PROJECT_DIR$/gopoint/go_pointer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/001.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/001.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/add.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/add.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/anonymousFunc.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/anonymousFunc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/args.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/args.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/bufferChannel.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/bufferChannel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/initChannel.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/initChannel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/initContext.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/initContext.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/initFunc.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/initFunc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/initSlice.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/initSlice.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/printPanic.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/printPanic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/printRescure.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/printRescure.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/printSort.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/printSort.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/testGoroutine.go" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/testGoroutine.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/rune.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/rune.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/rune_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/rune_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/string_.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/string_.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/字符数组.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/字符数组.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/context_go.go" beforeDir="false" afterPath="$PROJECT_DIR$/context/context_go.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go_base.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/go_base.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go_regex.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/go_regex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go_string.go" beforeDir="false" afterPath="$PROJECT_DIR$/base/go_string.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,24 +21,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="go_interface_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gointerface/go_interface_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="go_pointer.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gopoint/go_pointer.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="go_closure.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/closure/go_closure.go">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sortLib.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sortLib.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algorithms/sortLib.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#20#45#0" expanded="true" />
               </folding>
@@ -86,19 +52,16 @@
         </entry>
       </file>
       <file leaf-file-name="go_string.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go_string.go">
+        <entry file="file://$PROJECT_DIR$/base/go_string.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="90">
               <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-              <folding>
-                <element signature="e#14#42#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="go_regex.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go_regex.go">
+        <entry file="file://$PROJECT_DIR$/base/go_regex.go">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="12" selection-start-column="12" selection-end-column="12" />
@@ -107,19 +70,33 @@
         </entry>
       </file>
       <file leaf-file-name="go_base.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go_base.go">
+        <entry file="file://$PROJECT_DIR$/base/go_base.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1293">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+            <state relative-caret-position="207">
+              <caret line="126" column="23" lean-forward="true" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="context_go.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/context_go.go">
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state>
+              <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="context_go.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/context/context_go.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -191,6 +168,7 @@
         <option value="$PROJECT_DIR$/go_string.go" />
         <option value="$PROJECT_DIR$/go_base.go" />
         <option value="$PROJECT_DIR$/algorithms/sortLib.go" />
+        <option value="$PROJECT_DIR$/basic/go_regex.go" />
       </list>
     </option>
   </component>
@@ -228,6 +206,11 @@
               <item name="go_practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="go_practice" type="462c0819:PsiDirectoryNode" />
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go_practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go_practice" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="go_practice" type="b2602c69:ProjectViewProjectNode" />
@@ -419,21 +402,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/context_go.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-start-column="2" selection-end-line="27" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/context_go.go">
+    <entry file="file://$PROJECT_DIR$/context/context_go.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="12" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="12" />
@@ -748,44 +717,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/go_string.go">
+    <entry file="file://$PROJECT_DIR$/algorithms/sortLib.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
-            <element signature="e#14#42#0" expanded="true" />
+            <element signature="e#20#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/go_regex.go">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/go_string.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/go_regex.go">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/go_base.go">
+    <entry file="file://$PROJECT_DIR$/base/go_base.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1293">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        <state relative-caret-position="207">
+          <caret line="126" column="23" lean-forward="true" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/context_go.go">
+    <entry file="file://$PROJECT_DIR$/context/context_go.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/sortLib.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <element signature="e#20#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>
