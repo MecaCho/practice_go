@@ -1,9 +1,9 @@
 package base
 
 import (
-	"GoLab/channel"
-	"GoLab/leetcode"
-	_ "GoLab/leetcode"
+	"go_practice/channel"
+	"go_practice/leetcode"
+	_ "go_practice/leetcode"
 	"fmt"
 	"sync"
 )

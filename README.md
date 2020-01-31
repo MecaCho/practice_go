@@ -1,1 +1,1 @@
-# GoLab
+# go_practice
