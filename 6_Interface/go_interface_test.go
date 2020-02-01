@@ -1,4 +1,4 @@
-package gointerface
+package __Interface
 
 import "testing"
 

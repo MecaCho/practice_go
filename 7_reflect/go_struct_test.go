@@ -1,4 +1,4 @@
-package gostruct
+package __reflect
 
 import "testing"
 

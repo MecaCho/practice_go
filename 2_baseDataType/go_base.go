@@ -1,7 +1,7 @@
-package base
+package __baseDataType
 
 import (
-	"go_practice/channel"
+	"go_practice/9_channel"
 	"go_practice/leetcode"
 	_ "go_practice/leetcode"
 	"fmt"
@@ -38,7 +38,7 @@ func main() {
 	//leetcode.WithoutBufferChannel()
 
 	//channel.SendNilChannel()
-	channel.ReadCloseChannel()
+	__channel.ReadCloseChannel()
 	leetcode.InitSlice()
 
 	var wg sync.WaitGroup

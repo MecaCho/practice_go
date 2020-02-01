@@ -1,4 +1,4 @@
-package base
+package __baseDataType
 
 import "fmt"
 

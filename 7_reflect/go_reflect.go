@@ -1,4 +1,4 @@
-package go_reflect
+package __reflect
 
 import (
 	"fmt"
