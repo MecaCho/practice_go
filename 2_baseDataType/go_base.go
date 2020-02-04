@@ -1,10 +1,10 @@
 package __baseDataType
 
 import (
+	"fmt"
 	"go_practice/9_channel"
 	"go_practice/leetcode"
 	_ "go_practice/leetcode"
-	"fmt"
 	"sync"
 )
 

@@ -1,4 +1,4 @@
-package __Interface
+package __reflect
 
 import (
 	"fmt"
