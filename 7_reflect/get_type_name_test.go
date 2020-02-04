@@ -19,4 +19,8 @@ func TestGetTypeName(t *testing.T) {
 	GetTypeName(value)
 	GetTypeName(value1)
 	GetTypeName(value2)
+
+	GetTypeName1(value)
+	GetTypeName1(value1)
+	GetTypeName1(value2)
 }

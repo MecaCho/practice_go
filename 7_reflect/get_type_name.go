@@ -14,3 +14,9 @@ func GetTypeName(value interface{}) (name string) {
 	fmt.Println(name)
 	return
 }
+
+func GetTypeName1(value interface{}) (name string) {
+	name = reflect.TypeOf(value).String()
+	fmt.Println(name)
+	return
+}
