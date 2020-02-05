@@ -2,13 +2,17 @@ package validate
 
 import (
 	"fmt"
-	"testing"
 	"gopkg.in/go-playground/validator.v9"
+	"testing"
 )
 
 type Info struct {
 	ID   int64  `json:"id" validate:"required"`
 	Name string `json:"name" validate:"required,nameValidate"`
+}
+
+func ValidateName(value string) error {
+	return nil
 }
 
 func validateName(fl validator.FieldLevel) bool {
@@ -52,4 +56,3 @@ func TestTimeValidate(t *testing.T) {
 		fmt.Println(err)
 	}
 }
-
