@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"go_practice/gogc"
 )
 
 type Node struct {
@@ -43,18 +42,30 @@ func GetSliceLen() {
 // 	}
 // }
 
+func MergeArr(arrs [][]int64) []int64 {
+	res := []int64{}
+	max_len := 0
+	for i, _ := range arrs {
+		length := len(arrs[i])
+		if length > max_len {
+			max_len = length
+		}
+	}
+
+	for i := 0; i < max_len; i++ {
+		for _, arr := range arrs {
+			if i < len(arr) {
+				res = append(res, arr[i])
+			}
+		}
+	}
+
+	fmt.Println(res)
+	return res
+}
+
 func main() {
-	gogc.GetBonus()
-	// quit := make(chan int, 1)
-	// ret := make(chan int, 1)
-	//
-	// go func() {
-	// 	for i := 0; i < 10; i++ {
-	// 		fmt.Println(<-ret)
-	// 	}
-	// 	quit <- 1
-	// }()
-	// fibonacci(ret, quit)
+	fmt.Println("")
 }
 
 //func main() {

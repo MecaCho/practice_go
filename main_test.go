@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+	"runtime"
 	"testing"
 )
 
@@ -74,4 +76,13 @@ func BenchmarkPassingArrayWithRef(b *testing.B) {
 		withReference(&arr)
 	}
 	b.StopTimer()
+	runtime.GC()
+}
+
+func TestMergeArr(t *testing.T) {
+	arr1 := []int64{1, 2, 3}
+	arr2 := []int64{4, 5}
+	arrs := [][]int64{arr1, arr2}
+	res := MergeArr(arrs)
+	fmt.Println(res)
 }
