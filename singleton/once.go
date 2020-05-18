@@ -37,6 +37,7 @@ func OnceRun() {
 		wg.Add(1)
 		go func() {
 			o.Do(Task)
+			// Task()
 			wg.Done()
 		}()
 	}

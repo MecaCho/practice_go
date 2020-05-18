@@ -13,3 +13,12 @@ func RuneBasic() {
 	//rune 等同于int32,常用来处理unicode或utf-8字符
 	fmt.Println(len(stringTest), len([]rune(stringTest)), utf8.RuneCountInString(stringTest)) // 12 8 8
 }
+
+func GetStringLen() {
+	s := "abc123中文"
+
+	fmt.Println(len(s))
+
+	fmt.Println(len([]rune(s)))
+
+}
