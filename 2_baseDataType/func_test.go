@@ -9,3 +9,7 @@ func TestRunFuncs(t *testing.T) {
 func TestRunTwoFunc(t *testing.T) {
 	RunTwoFunc()
 }
+
+func TestFuncInFunc(t *testing.T) {
+	FuncInFunc()
+}

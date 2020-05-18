@@ -27,3 +27,11 @@ func TestWaitGroup(t *testing.T) {
 func TestDeferDone(t *testing.T) {
 	DeferDone()
 }
+
+func TestPrintRandIntMap(t *testing.T) {
+	PrintRandIntMap()
+}
+
+func TestWaitGroupWithMaxProcs(t *testing.T) {
+	WaitGroupWithMaxProcs()
+}

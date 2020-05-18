@@ -1,6 +1,9 @@
 package _2_sync
 
 import (
+	"fmt"
+	rand2 "math/rand"
+	"runtime"
 	"sync"
 	"time"
 )
@@ -66,3 +69,65 @@ func DeferDone() {
 // In your recursive cases in ThreadSafeCalcWords, you're calling wg.Done before calling wg.Add. That means that the wg can drop down to 0 (which will trigger the Wait to complete) before you actually finish all the work. Calling Add again while the Wait is still in the process of resolving is what triggers the error, but more importantly, it probably just plain isn't what you want.
 //
 // Change the order of operations so that you always Add any new work before doing Done on the existing work, and the Wait won't trigger prematurely. The simplest way to accomplish this would probably be a single call to wg.Done() at the bottom of the function, or a single defer at the top, and removing all the others.
+
+//
+func DeferDone1() {
+	const N = 10
+
+	var wg = &sync.WaitGroup{}
+
+	for i := 0; i < N; i++ {
+		wg.Add(1)
+		go func(i int) {
+			// defer wg.Done()
+
+			println(i)
+			defer wg.Done()
+			// wg.Done()
+		}(i)
+	}
+	wg.Wait()
+}
+
+const N = 10
+
+// === RUN   TestPrintRandIntMap
+// fatal error: concurrent map writes
+// map并发读写的问题 并发访问map并不安全,会出现未定义行为,会导致程序退出,
+// 如果希望在多协程里并发访问map,必须提供某种同步机制,通常可以使用读写锁 sync.RWMutex实现 对map的并发访问控制!
+func PrintRandIntMap() {
+	m := make(map[int]int)
+	wg := &sync.WaitGroup{}
+	wg.Add(N)
+	for i := 0; i < N; i++ {
+		go func() {
+			defer wg.Done()
+			// b := new(big.Int).SetInt64(int64(n))
+			// randInt, _ := rand.Int(rand.Reader, b)
+			randInt := rand2.Int()
+			m[randInt] = randInt
+		}()
+	}
+	wg.Wait()
+	fmt.Println(len(m))
+}
+
+// 使用goroutine在处理闭包的时候，避免发生类似第一个go func中的问题。
+func WaitGroupWithMaxProcs() {
+	runtime.GOMAXPROCS(1)
+	wg := sync.WaitGroup{}
+	wg.Add(20)
+	for i := 0; i < 10; i++ {
+		go func() {
+			fmt.Println("A: ", i)
+			wg.Done()
+		}()
+	}
+	for i := 0; i < 10; i++ {
+		go func(i int) {
+			fmt.Println("B: ", i)
+			wg.Done()
+		}(i)
+	}
+	wg.Wait()
+}
