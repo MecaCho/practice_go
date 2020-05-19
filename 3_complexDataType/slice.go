@@ -7,6 +7,46 @@ func SliceAppend() {
 	s := make([]int, 3, 8)
 	a := s[:9]
 	fmt.Println(s, a)
+
+}
+
+var str1 = ""
+
+var str2 string
+
+func GetCapLen() {
+	arr := [3]int{1, 2, 3}
+	capLen := cap(arr)
+	fmt.Println(capLen)
+
+	ch := make(chan int, 10)
+	capChanLen := cap(ch)
+	fmt.Println(capChanLen)
+
+	x := []int{1, 2, 3,
+		4, 5, 6,
+	}
+	fmt.Println(x)
+
+	x1 := []int{1, 2, 3,
+		4, 5, 6}
+	fmt.Println(x1)
+
+	x2 := []int{1, 2, 3, 4, 5, 6}
+	fmt.Println(x2)
+
+	x3 := []int{1, 2, 3, 4, 5, 6}
+	fmt.Println(x3)
+
+	x4 := make([]int, 6)
+	fmt.Println(x4)
+
+	// var x5  =  nil
+	// fmt.Println(x5)
+
+	str := ""
+	fmt.Println(str)
+
 }
 
 // panic: runtime error: slice bounds out of range [:9] with capacity 8 [recovered]
