@@ -88,8 +88,8 @@ func PrintStr(a_chan, next_chan, done chan int, str string) {
 	for i := 0; i < 100; i++ {
 		select {
 		case <-a_chan:
-			// fmt.Print(fmt.Sprintf("%s-%d", str, i))
-			fmt.Sprintf("%s-%d", str, i)
+			fmt.Print(fmt.Sprintf("%s-%d", str, i))
+			// fmt.Sprintf("%s-%d", str, i)
 			next_chan <- i
 		}
 	}
@@ -100,14 +100,14 @@ func PrintStr(a_chan, next_chan, done chan int, str string) {
 
 func PrintABC() {
 	a_chan := make(chan int, 1)
-	b_chan := make(chan int, 1)
-	c_chan := make(chan int, 1)
+	b_chan := make(chan int)
+	c_chan := make(chan int)
 	done := make(chan int, 1)
-
+	a_chan <- 1
 	go PrintStr(a_chan, b_chan, done, "A")
 	go PrintStr(b_chan, c_chan, done, "B")
 	go PrintStr(c_chan, a_chan, done, "C")
-	a_chan <- 1
+
 	<-done
 	// fmt.Println("\nend", <-done)
 }

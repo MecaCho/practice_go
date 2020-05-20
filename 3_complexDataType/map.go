@@ -108,3 +108,13 @@ func GetMapValue() {
 	v, err := GetValue(intmap, 3)
 	fmt.Println(v, err)
 }
+
+func SyncMap() {
+
+	newMap := sync.Map{}
+	newMap.Store("abc", "123")
+	newMap.LoadOrStore("qwq", "qwe")
+	newMap.Load("qwq")
+	newMap.Delete("qwq")
+
+}
