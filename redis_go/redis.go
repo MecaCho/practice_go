@@ -8,6 +8,21 @@ import (
 	"github.com/go-redis/redis"
 )
 
+// go get github.com/alphazero/Go-Redis
+// go get github.com/simonz05/godis
+// go get github.com/garyburd/redigo
+// go get github.com/gosexy/redis
+// go get cgl.tideland.biz/redis
+//
+// 目前这五种
+//
+// 开源库redigo的使用
+// github地址：
+// https://github.com/garyburd/redigo
+//
+// 文档地址：
+// http://godoc.org/github.com/garyburd/redigo/redis
+
 func incr() {
 	client := redis.NewClient(&redis.Options{
 		Addr:     "localhost:6379",
