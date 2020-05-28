@@ -9,3 +9,7 @@ func TestCloseChan(t *testing.T) {
 func TestChanRun(t *testing.T) {
 	ChanRun()
 }
+
+func TestNoBuffChan(t *testing.T) {
+	NoBuffChan()
+}

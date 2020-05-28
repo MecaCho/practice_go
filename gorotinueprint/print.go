@@ -8,6 +8,25 @@ const (
 	StrPrint = "ABCDEFGHIJKLMNOPQRSTUVWXYZAB"
 )
 
+func PrintChar() {
+
+	for i := range StrPrint {
+		fmt.Println(StrPrint[i])
+	}
+
+	s := []rune("people")
+
+	for i, v := range s {
+		fmt.Println(s[i], v)
+	}
+
+	s1 := "people"
+
+	for i, v := range s1 {
+		fmt.Println(s1[i], string(v))
+	}
+}
+
 func PrintNumAndStr() {
 
 	chanNum := make(chan bool)

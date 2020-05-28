@@ -33,3 +33,13 @@ func BenchmarkPrintWaitGroup(b *testing.B) {
 		PrintWaitGroup()
 	}
 }
+
+func TestChangeArrItem(t *testing.T) {
+	arr := [3]int64{1, 2, 3}
+	ChangeArrItem(arr)
+	fmt.Println(arr)
+
+	s := []int64{1, 2, 3}
+	ChangeSliceItem(s)
+	fmt.Println(s)
+}

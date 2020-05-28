@@ -1,6 +1,9 @@
 package _2_sync
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestWaitGroup(t *testing.T) {
 	WaitGroup()
@@ -34,4 +37,20 @@ func TestPrintRandIntMap(t *testing.T) {
 
 func TestWaitGroupWithMaxProcs(t *testing.T) {
 	WaitGroupWithMaxProcs()
+}
+
+func TestIsPrefixOfWord(t *testing.T) {
+	res := IsPrefixOfWord("i use triple pillow", "pill")
+	fmt.Println(res)
+}
+
+func TestVerifyPeople(t *testing.T) {
+	res := VerifyPeople("peabcoplbe")
+	fmt.Println(res)
+
+	res = VerifyPeople("aapeoplea")
+	fmt.Println(res)
+
+	res = VerifyPeople("peaaple")
+	fmt.Println(res)
 }

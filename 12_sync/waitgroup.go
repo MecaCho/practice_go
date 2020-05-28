@@ -4,6 +4,7 @@ import (
 	"fmt"
 	rand2 "math/rand"
 	"runtime"
+	"strings"
 	"sync"
 	"time"
 )
@@ -131,3 +132,45 @@ func WaitGroupWithMaxProcs() {
 	}
 	wg.Wait()
 }
+
+func IsPrefixOfWord(sentence string, searchWord string) int {
+
+	wordList := strings.Split(strings.TrimSpace(sentence), " ")
+	fmt.Println(wordList)
+	for i := range wordList {
+		if strings.HasPrefix(wordList[i], searchWord) {
+			return i + 1
+		}
+	}
+	return -1
+
+}
+
+func VerifyPeople(input string) bool {
+	people := "people"
+
+	j := 0
+	for i := range input {
+		if j >= len(people) {
+			return true
+		}
+		if input[i] == people[j] {
+			j++
+		}
+	}
+	if j == len(people) {
+		return true
+	}
+	return false
+}
+
+// func TestVerifyPeople(t *testing.T) {
+// 	res := VerifyPeople("peabcoplbe")
+// 	fmt.Println(res)
+//
+// 	res = VerifyPeople("aapeoplea")
+// 	fmt.Println(res)
+//
+// 	res = VerifyPeople("peaaple")
+// 	fmt.Println(res)
+// }

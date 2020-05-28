@@ -84,6 +84,18 @@ func AddItem(arr *[]int64, item int64) {
 
 }
 
+func ChangeArrItem(arr [3]int64) {
+
+	arr[0] = 100
+
+}
+
+func ChangeSliceItem(arr []int64) {
+
+	arr[0] = 100
+
+}
+
 func PrintStr(a_chan, next_chan, done chan int, str string) {
 	for i := 0; i < 100; i++ {
 		select {
