@@ -1,6 +1,9 @@
 package __baseDataType
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func DeferReturn() {
 	defer func() {
@@ -70,5 +73,30 @@ func DeferFun() {
 	println(DeferFunc1(1))
 	println(DeferFunc2(1))
 	println(DeferFunc3(1))
+
+}
+
+func VarInDefer() {
+
+	var i = 1
+	defer fmt.Println("result: ", func() int { return i * 2 }())
+	i++
+
+}
+
+func DeferInFor() {
+	files := []string{"a", "b", "c"}
+
+	for k := range files {
+		f, _ := os.Open(files[k])
+		defer f.Close()
+	}
+
+	for k := range files {
+		func() {
+			f, _ := os.Open(files[k])
+			defer f.Close()
+		}()
+	}
 
 }

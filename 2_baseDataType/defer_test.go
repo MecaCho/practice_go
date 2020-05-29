@@ -17,3 +17,7 @@ func TestCalDefer(t *testing.T) {
 func TestDeferFun(t *testing.T) {
 	DeferFun()
 }
+
+func TestVarInDefer(t *testing.T) {
+	VarInDefer()
+}

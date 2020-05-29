@@ -64,8 +64,19 @@ func MergeArr(arrs [][]int64) []int64 {
 	return res
 }
 
+func UsePlug() {
+
+	fmt.Println("test use plugin")
+
+}
+
 func main() {
 	fmt.Println("")
+	// UsePlug()
+	UsePlugin1()
+	UsePlugin2()
+	UsePlugin3()
+	StartServer()
 }
 
 //func main() {
