@@ -8,8 +8,7 @@ func Rob(nums []int) int {
 	if length == 1 {
 		return nums[0]
 	}
-	dp := [length]int{}
-	// dp := make([]int, length)
+	dp := make([]int, length)
 	dp[0] = nums[0]
 	dp[1] = nums[1]
 	if nums[0] > nums[1] {
