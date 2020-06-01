@@ -1,6 +1,9 @@
 package weekly_191
 
-import "math"
+import (
+	"math"
+	"reflect"
+)
 
 func maxArea(h int, w int, horizontalCuts []int, verticalCuts []int) int {
 	horizontalCuts = append(horizontalCuts, 0, h)
@@ -29,6 +32,7 @@ func maxArea(h int, w int, horizontalCuts []int, verticalCuts []int) int {
 			vs = append(vs, v)
 		}
 	}
+	reflect.DeepEqual()
 
 	return (max_h * max_v) % (int(math.Pow10(9)) + 7)
 
