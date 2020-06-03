@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"time"
+	"strings"
 )
 
 func InitContext() {
@@ -57,5 +58,42 @@ func InitContext1() {
 	case <-ctx.Done():
 		fmt.Println("############## time out.")
 		fmt.Println(ctx.Err())
+	}
+}
+
+func FallThrough() {
+
+
+	// techstack := "coding,Golang,Node.js,Python,Kubernetes,Serverless"
+	techstack := "Golang"
+	passions := "I can coding " + techstack
+
+	fmt.Println(strings.Contains(passions, "coding"))
+	if strings.Contains(passions, "coding") {
+
+		switch techstack {
+
+		case "Golang":
+			fmt.Println("Golang")
+			fallthrough
+
+		case "Node.js":
+
+			fallthrough
+
+		case "Python":
+
+			fallthrough
+
+		case "Kubernetes":
+
+			fallthrough
+
+		case "Serverless":
+
+			fmt.Println("xxxxxxx")
+
+		}
+
 	}
 }

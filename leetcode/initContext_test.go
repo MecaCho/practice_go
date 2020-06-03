@@ -15,3 +15,7 @@ func BenchmarkInitContext1(b *testing.B) {
 		InitContext1()
 	}
 }
+
+func TestFallThrough(t *testing.T) {
+	FallThrough()
+}
