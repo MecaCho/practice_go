@@ -38,8 +38,6 @@ import "sort"
 // The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000].
 // Multiplication of any three numbers in the input won't exceed the range of 32-bit signed integer.
 
-
-
 func maximumProduct(nums []int) int {
 
 	sort.Ints(nums)
@@ -50,7 +48,7 @@ func maximumProduct(nums []int) int {
 
 	max_Product1 := nums[0] * nums[1] * nums[length-1]
 
-	if max_Product > max_Product1{
+	if max_Product > max_Product1 {
 		return max_Product
 	}
 

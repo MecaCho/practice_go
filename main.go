@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"net/http"
+	_ "net/http/pprof"
 )
 
 type Node struct {
@@ -76,7 +79,8 @@ func main() {
 	UsePlugin1()
 	UsePlugin2()
 	UsePlugin3()
-	StartServer()
+	// StartServer()
+	log.Println(http.ListenAndServe("localhost:8081", nil))
 }
 
 //func main() {

@@ -6,7 +6,7 @@ func MakeNew() {
 
 	slices := make([]int64, 10)
 	for k := range slices {
-		fmt.Println(slices[k])
+		fmt.Println(k, slices[k])
 	}
 
 	maps := make(map[int64]int64, 10)
@@ -21,4 +21,7 @@ func MakeNew() {
 
 	slices1 := new([]int64)
 	fmt.Println(slices1)
+
+	a := new(int64)
+	fmt.Println(a, *a)
 }

@@ -10,3 +10,7 @@ func TestGoToLoop(t *testing.T) {
 func TestBreakLoop(t *testing.T) {
 	BreakLoop()
 }
+
+func TestGotoFunc(t *testing.T) {
+	GotoFunc()
+}

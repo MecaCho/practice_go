@@ -8,6 +8,7 @@ import (
 type Manager struct{}
 
 var m *Manager
+
 var once sync.Once
 
 func GetInstance() *Manager {
@@ -17,6 +18,6 @@ func GetInstance() *Manager {
 	return m
 }
 
-func (p Manager) Manage() {
+func (p *Manager) Manage() {
 	fmt.Println("manage...")
 }
