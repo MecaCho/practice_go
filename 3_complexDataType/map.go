@@ -2,6 +2,7 @@ package __complexDataType
 
 import (
 	"fmt"
+	"reflect"
 	"sync"
 )
 
@@ -116,5 +117,17 @@ func SyncMap() {
 	newMap.LoadOrStore("qwq", "qwe")
 	newMap.Load("qwq")
 	newMap.Delete("qwq")
+
+}
+
+func MapEqueal() {
+
+	map1 := make(map[string]string, 10)
+	map2 := make(map[string]string, 10)
+
+	map1["123"] = "abc"
+
+	res := reflect.DeepEqual(map1, map2)
+	fmt.Println(res)
 
 }

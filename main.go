@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"net/http"
 	_ "net/http/pprof"
+	"runtime"
+	"time"
 )
 
 type Node struct {
@@ -74,13 +74,23 @@ func UsePlug() {
 }
 
 func main() {
-	fmt.Println("")
-	// UsePlug()
-	UsePlugin1()
-	UsePlugin2()
-	UsePlugin3()
-	// StartServer()
-	log.Println(http.ListenAndServe("localhost:8081", nil))
+	// fmt.Println("")
+	// // UsePlug()
+	// UsePlugin1()
+	// UsePlugin2()
+	// UsePlugin3()
+	// // StartServer()
+	// log.Println(http.ListenAndServe("localhost:8081", nil))
+
+	go func() {
+		for {
+			// time.Sleep(1 * time.Second)
+			fmt.Println("hello")
+		}
+	}()
+	time.Sleep(time.Millisecond)
+	runtime.GC()
+	println("OK")
 }
 
 //func main() {

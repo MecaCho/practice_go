@@ -13,3 +13,7 @@ func TestConMap(t *testing.T) {
 func TestGetMapValue(t *testing.T) {
 	GetMapValue()
 }
+
+func TestMapEqueal(t *testing.T) {
+	MapEqueal()
+}

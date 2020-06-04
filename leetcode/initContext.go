@@ -3,8 +3,8 @@ package leetcode
 import (
 	"context"
 	"fmt"
-	"time"
 	"strings"
+	"time"
 )
 
 func InitContext() {
@@ -63,7 +63,6 @@ func InitContext1() {
 
 func FallThrough() {
 
-
 	// techstack := "coding,Golang,Node.js,Python,Kubernetes,Serverless"
 	techstack := "Golang"
 	passions := "I can coding " + techstack
@@ -78,19 +77,19 @@ func FallThrough() {
 			fallthrough
 
 		case "Node.js":
-
+			fmt.Println("node")
 			fallthrough
 
 		case "Python":
-
+			fmt.Println("python")
 			fallthrough
 
 		case "Kubernetes":
-
+			fmt.Println("k8s")
 			fallthrough
 
 		case "Serverless":
-
+			fmt.Println("serverless")
 			fmt.Println("xxxxxxx")
 
 		}
