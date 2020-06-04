@@ -1,6 +1,5 @@
 package tree
 
-
 /**
  * Definition for a binary tree node.
  * type TreeNode struct {
@@ -11,26 +10,26 @@ package tree
  */
 func longestConsecutive(root *TreeNode) int {
 	maxLength := 0
-	if root == nil{
+	if root == nil {
 		return 0
 	}
 
-	Dfs(root, root.Val,1,  &maxLength)
+	Dfs(root, root.Val, 1, &maxLength)
 	return maxLength
 }
 
-func Dfs(root *TreeNode, val,length int,maxLength  *int) {
+func Dfs(root *TreeNode, val, length int, maxLength *int) {
 
-	if root == nil{
+	if root == nil {
 		return
 	}
 	// newLength := length
-	if root.Val == val + 1{
-		length ++
-	}else {
+	if root.Val == val+1 {
+		length++
+	} else {
 		length = 1
 	}
-	if *maxLength < length{
+	if *maxLength < length {
 		*maxLength = length
 	}
 	Dfs(root.Left, root.Val, length, maxLength)
