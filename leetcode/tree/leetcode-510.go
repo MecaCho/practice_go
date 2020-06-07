@@ -151,3 +151,50 @@ func inorderSuccessor(node *Node) *Node {
 // -10^5 <= Node.val <= 10^5
 // 1 <= Number of Nodes <= 10^4
 // All Nodes will have unique values.
+
+//  solutions
+
+// 前驱和后继
+// 前驱：指的是中序遍历的上一个结点，或者说是比当前结点小的最大结点。
+// 后继：指的是中序遍历的下一个结点，或者说是比当前结点大的最小结点。
+//
+//
+// 方法：迭代
+// 这里可能有两种情况：
+//
+// node 结点有右孩子，且它的后继在树中相对较低的位置，为了找到后继，我们应该向右走一次，再尽可能的向左走。
+//
+//
+// node 结点没有右孩子，则它的后继在树中相对较高的位置，为了找到后继，我们向上走到直到结点 tmp 的左孩子是 node 的父节点时，则 node 的后继为 tmp。若没有找到符合条件的结点说明该结点没有后继。
+//
+//
+//
+//
+// 算法：
+//
+// 若 node 结点有右孩子，则它的后继在树中相对较低的位置。我们向右走一次，再尽可能的向左走，返回最后所在的结点。
+// 若 node 结点没有右孩子，则它的后继在树中相对较高的位置。我们向上走到直到结点 tmp 的左孩子是 node 的父节点时，则 node 的后继为 tmp。
+// PythonJavaC++
+//
+// class Solution:
+//    def inorderSuccessor(self, node: 'Node') -> 'Node':
+//        # the successor is somewhere lower in the right subtree
+//        if node.right:
+//            node = node.right
+//            while node.left:
+//                node = node.left
+//            return node
+//
+//        # the successor is somewhere upper in the tree
+//        while node.parent and node == node.parent.right:
+//            node = node.parent
+//        return node.parent
+// 复杂度分析
+//
+// 时间复杂度：\mathcal{O}(H)O(H)。其中 HH 为数的高度。平均时间复杂度为 \mathcal{O}(\log N)O(logN)，最坏的事件复杂度为 \mathcal{O}(N)O(N)，其中 NN 为树的结点数。
+// 空间复杂度：\mathcal{O}(1)O(1)，在计算的过程中没有使用额外空间。
+//
+// 作者：LeetCode
+// 链接：https://leetcode-cn.com/problems/inorder-successor-in-bst-ii/solution/er-cha-sou-suo-shu-zhong-de-zhong-xu-hou-ji-ii-by-/
+// 来源：力扣（LeetCode）
+// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

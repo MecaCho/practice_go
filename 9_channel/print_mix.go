@@ -11,6 +11,8 @@ func MixPrint() {
 	chan_c := make(chan bool, 1)
 	done := make(chan struct{})
 
+	chan_n <- true
+
 	go func() {
 		for i := 1; i < 11; i += 2 {
 			<-chan_c
@@ -127,7 +129,8 @@ func PrintABC() {
 func PrintStrWaitGroup(a_chan, next_chan chan int, str string, wg *sync.WaitGroup) {
 	for i := 0; i < 100; i++ {
 		select {
-		case <-a_chan:
+		case v, ok := <-a_chan:
+			fmt.Println(v, ok)
 			// fmt.Print(fmt.Sprintf("%s-%d", str, i))
 			fmt.Sprintf("%s-%d", str, i)
 			next_chan <- i

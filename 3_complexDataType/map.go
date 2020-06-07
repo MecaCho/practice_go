@@ -127,6 +127,8 @@ func MapEqueal() {
 
 	map1["123"] = "abc"
 
+	map2["123"] = "abc"
+
 	res := reflect.DeepEqual(map1, map2)
 	fmt.Println(res)
 
