@@ -143,3 +143,33 @@ func ReverseBetween(head *ListNode, m int, n int) *ListNode {
 func main() {
 
 }
+
+func MySort(arr []string) []string {
+	length := len(arr)
+	if length == 0 || length == 1 {
+		return arr
+	}
+	len0 := len(arr[0])
+	left := []string{}
+	right := []string{}
+	j := 1
+	for j < len(arr) {
+		// fmt.Println(arr[j])
+		if len(arr[j]) > len0 {
+			right = append(right, arr[j])
+		} else {
+			left = append(left, arr[j])
+		}
+		j++
+	}
+
+	// fmt.Println(left, right)
+
+	sortedLeft := MySort(left)
+	sortedLeft = append(sortedLeft, arr[0])
+	sortedRight := MySort(right)
+	for i := range sortedRight {
+		sortedLeft = append(sortedLeft, sortedRight[i])
+	}
+	return sortedLeft
+}

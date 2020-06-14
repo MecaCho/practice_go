@@ -41,49 +41,48 @@ import "math"
 //            res = min(res, dp[m-1][i][target-1])
 //        return res if res != float("inf") else -1
 
-
 func minCost(houses []int, cost [][]int, m int, n int, target int) int {
 	dp := [][][]int{}
-	for i:= 0; i < m; i++{
+	for i := 0; i < m; i++ {
 		dp = append(dp, [][]int{})
-		for j:= 0; j < n; j++{
+		for j := 0; j < n; j++ {
 
 			dp[i] = append(dp[i], []int{})
 
-			for k := 0; k < target; k++{
+			for k := 0; k < target; k++ {
 				dp[i][j] = append(dp[i][j], math.MaxInt64)
 			}
 		}
 	}
 
-	for j := 0; j < n; j++{
-		if houses[0] == 0{
+	for j := 0; j < n; j++ {
+		if houses[0] == 0 {
 			dp[0][j][0] = cost[0][j]
-		}else{
+		} else {
 			dp[0][houses[0]-1][0] = 0
 		}
 	}
 
-	for i := 1; i < m; i++{
-		for j:= 0; j < n; j++{
-			for k:= 0; k < target;k++{
-				if houses[i] != 0 && houses[i] - 1 != j{
+	for i := 1; i < m; i++ {
+		for j := 0; j < n; j++ {
+			for k := 0; k < target; k++ {
+				if houses[i] != 0 && houses[i]-1 != j {
 					break
 				}
 				minVal := dp[i-1][j][k]
-				for kk := 0; kk < n; kk++{
-					if kk != j && k > 0 && k-1 < target{
-						if dp[i-1][kk][k-1] < minVal{
+				for kk := 0; kk < n; kk++ {
+					if kk != j && k > 0 && k-1 < target {
+						if dp[i-1][kk][k-1] < minVal {
 							minVal = dp[i-1][kk][k-1]
 						}
 						// tmp = append(tmp, dp[i-1][kk][k-1])
 					}
 				}
 				curCost := cost[i][j]
-				if houses[i] != 0{
+				if houses[i] != 0 {
 					curCost = 0
 				}
-				if minVal != math.MaxInt64{
+				if minVal != math.MaxInt64 {
 					dp[i][j][k] = minVal + curCost
 				}
 
@@ -92,13 +91,13 @@ func minCost(houses []int, cost [][]int, m int, n int, target int) int {
 	}
 
 	res := -1
-	for i := 0; i < n; i++{
-		if res == -1 || dp[m-1][i][target-1] < res{
+	for i := 0; i < n; i++ {
+		if res == -1 || dp[m-1][i][target-1] < res {
 			res = dp[m-1][i][target-1]
 		}
 	}
 
-	if res >= math.MaxInt64{
+	if res >= math.MaxInt64 {
 		return -1
 	}
 

@@ -19,3 +19,15 @@ func TestReverseBetween(t *testing.T) {
 	// h, tail := ReverseK(&l, 2)
 	// fmt.Println(h, "xxxxxxxx", tail)
 }
+
+func TestMySort(t *testing.T) {
+	//a := 0
+	//fmt.Scan(&a)
+	//fmt.Printf("%d\n", a)
+	// fmt.Printf("Hello World!\n")
+	//input : ["aaa", "ab"]
+	//output : ["ab", "aaa"]
+	input := []string{"abc", "abcjfhdkj", "a", "afsdf", "fhdjs"}
+	res := MySort(input)
+	fmt.Println(res)
+}

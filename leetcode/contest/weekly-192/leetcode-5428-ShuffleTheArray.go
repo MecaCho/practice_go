@@ -56,13 +56,11 @@ package weekly_192
 // nums.length == 2n
 // 1 <= nums[i] <= 10^3
 
-
-
 func shuffle(nums []int, n int) []int {
 
 	newNums := []int{}
 	// newNums := make([]int, 2*n)
-	for i := 0;i < n;i++{
+	for i := 0; i < n; i++ {
 		newNums = append(newNums, nums[i])
 		newNums = append(newNums, nums[i+n])
 		// newNums[i*2] = nums[i]

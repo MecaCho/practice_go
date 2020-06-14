@@ -25,9 +25,9 @@ func longestOnes(A []int, K int) int {
 				maxLength = newLength
 			}
 		} else {
-			if len(zeroIndexs) < K{
+			if len(zeroIndexs) < K {
 				zeroIndexs = append(zeroIndexs, k)
-			}else {
+			} else {
 				zeroIndexs = zeroIndexs[1:K]
 				zeroIndexs = append(zeroIndexs, k)
 			}
