@@ -2,7 +2,7 @@ package __baseDataType
 
 import (
 	"fmt"
-	"go_practice/9_channel"
+	__channel "go_practice/9_channel"
 	"go_practice/leetcode"
 	_ "go_practice/leetcode"
 	"sync"
@@ -58,7 +58,7 @@ func main() {
 	}()
 
 	//
-	deferTest()
+	DeferTest()
 
 	//
 	mapTest()
@@ -83,14 +83,30 @@ func main() {
 
 }
 
-func deferTest() {
+func DeferTest() {
 
 	defer fmt.Println("abc")
 
 	panic("test panic")
 
 	defer fmt.Println("def")
+}
 
+func DeferPanicTest() {
+
+	defer recover()
+
+	panic("test panic")
+}
+
+func DeferPanicTest1() {
+
+	defer func() {
+		fmt.Println("recover......")
+		recover()
+	}()
+
+	panic("test panic")
 }
 
 func mapTest() {

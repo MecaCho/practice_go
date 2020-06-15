@@ -20,4 +20,5 @@ func TestDeferFun(t *testing.T) {
 
 func TestVarInDefer(t *testing.T) {
 	VarInDefer()
+	VarInDefer1()
 }

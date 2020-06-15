@@ -3,6 +3,7 @@ package __baseDataType
 import (
 	"fmt"
 	"os"
+	"time"
 )
 
 func DeferReturn() {
@@ -49,39 +50,85 @@ func DeferFunc1(i int) (t int) {
 	t = i
 	defer func() {
 		t += 3
+		fmt.Println("t in defer1: ", t)
 	}()
 	return t
+
+	// t in defer1:  4
+	// t in func result: 4
+	// t in defer2:  4
+	// t in func result: 1
+	// t in defer3:  3
+	// t in func result: 3
 }
 
 func DeferFunc2(i int) int {
 	t := i
 	defer func() {
 		t += 3
+		fmt.Println("t in defer2: ", t)
 	}()
 	return t
 }
 
 func DeferFunc3(i int) (t int) {
 	defer func() {
-		t += i
+		t += 1
+		fmt.Println("t in defer3: ", t)
 	}()
-	return 2
+	return t
 }
 
 func DeferFun() {
 
-	println(DeferFunc1(1))
-	println(DeferFunc2(1))
-	println(DeferFunc3(1))
+	println("t in func result:", DeferFunc1(1))
+	println("t in func result:", DeferFunc2(1))
+	println("t in func result:", DeferFunc3(1))
+	// 	4
+	// 1
+	// 3
+	// t in defer1:  4
+	// t in func result: 4
+	// t in defer2:  4
+	// t in func result: 1
+	// t in defer3:  3
+	// t in func result: 3
 
 }
 
 func VarInDefer() {
 
 	var i = 1
+	defer func() {
+		fmt.Println("result: ", func() int { return i * 2 }())
+	}()
+	i++
+
+	startedAt := time.Now()
+	defer func() { fmt.Println("defer time: ", time.Since(startedAt)) }()
+
+	time.Sleep(time.Second)
+
+	fmt.Println("return time: ", time.Since(startedAt))
+	// 	return time:  1.003767335s
+	// defer time:  1.003916954s
+
+}
+
+func VarInDefer1() {
+
+	var i = 1
 	defer fmt.Println("result: ", func() int { return i * 2 }())
 	i++
 
+	startedAt := time.Now()
+	defer fmt.Println("defer time: ", time.Since(startedAt))
+
+	time.Sleep(time.Second)
+	fmt.Println("return time: ", time.Since(startedAt))
+
+	// 	return time:  1.002410955s
+	// defer time:  205ns
 }
 
 func DeferInFor() {
