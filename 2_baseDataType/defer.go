@@ -73,10 +73,10 @@ func DeferFunc2(i int) int {
 
 func DeferFunc3(i int) (t int) {
 	defer func() {
-		t += 1
+		t += i
 		fmt.Println("t in defer3: ", t)
 	}()
-	return t
+	return 2
 }
 
 func DeferFun() {

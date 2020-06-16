@@ -137,6 +137,34 @@ func sliceTest() {
 
 }
 
+func CapOfSlice() {
+
+	s := []int{}
+
+	fmt.Println("len: ", len(s), "   cap: ", cap(s))
+
+	preCap := 0
+
+	for i := 0; i < 1000; i++ {
+		s = append(s, i)
+		if cap(s) != preCap {
+			fmt.Println("len: ", len(s), "   cap: ", cap(s))
+			preCap = cap(s)
+		}
+	}
+	// 	len:  1    cap:  1
+	// len:  2    cap:  2
+	// len:  3    cap:  4
+	// len:  5    cap:  8
+	// len:  9    cap:  16
+	// len:  17    cap:  32
+	// len:  33    cap:  64
+	// len:  65    cap:  128
+	// len:  129    cap:  256
+	// len:  257    cap:  512
+	// len:  513    cap:  1024
+}
+
 func reverseList(head *Node) *Node {
 	var tmp *Node = nil
 	for head != nil {

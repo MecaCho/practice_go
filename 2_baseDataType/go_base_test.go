@@ -7,3 +7,7 @@ func TestDeferTest(t *testing.T) {
 	// DeferPanicTest()
 	DeferPanicTest1()
 }
+
+func TestCapOfSlice(t *testing.T) {
+	CapOfSlice()
+}
