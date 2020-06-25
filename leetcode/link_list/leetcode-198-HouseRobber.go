@@ -1,6 +1,7 @@
 package link_list
 
 func Rob(nums []int) int {
+
 	length := len(nums)
 	if length == 0 {
 		return 0
