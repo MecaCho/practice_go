@@ -1,21 +1,20 @@
 package goroutine
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
-func Fib()  {
+func Fib() {
 	go spinner(100 * time.Millisecond)
-	const n  = 45
+	const n = 45
 	fibN := fib(n)
-	fmt.Printf("\rFibonacci(%d) = %d\n", n , fibN)
+	fmt.Printf("\rFibonacci(%d) = %d\n", n, fibN)
 }
 
-
-func spinner(delay time.Duration){
+func spinner(delay time.Duration) {
 	for {
-		for _, r := range `-\|/`{
+		for _, r := range `-\|/` {
 			fmt.Printf("..\r%c", r)
 			// fmt.Println(".", time.Now())
 			time.Sleep(delay)
@@ -23,9 +22,9 @@ func spinner(delay time.Duration){
 	}
 }
 
-func fib(x int)  int{
+func fib(x int) int {
 
-	if x < 2{
+	if x < 2 {
 		return x
 	}
 	return fib(x-1) + fib(x-2)
