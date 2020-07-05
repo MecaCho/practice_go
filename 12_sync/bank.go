@@ -8,7 +8,7 @@ import (
 
 var (
 	sema    = make(chan struct{}, 1)
-	mu     sync.Mutex
+	mu      sync.Mutex
 	balance int
 )
 
