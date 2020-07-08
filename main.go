@@ -7,8 +7,6 @@ import (
 	"time"
 )
 
-
-
 type Node struct {
 	Name string
 	ID   int64
@@ -16,7 +14,6 @@ type Node struct {
 }
 
 func (n Node) GetInfo() string {
-
 
 	return fmt.Sprintf("%s, %d", n.Name, n.ID)
 }
