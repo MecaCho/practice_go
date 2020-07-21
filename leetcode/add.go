@@ -18,3 +18,18 @@ func AddTest() {
 	add([]int{5, 6, 7}...)
 
 }
+
+func SliceArr() {
+
+	arr := [4]int64{1, 2, 3, 4}
+
+	s := arr[:]
+
+	s[1] = 100
+
+	s = append(s, 121, 123)
+
+	s[0] = 900
+
+	fmt.Println(arr, s)
+}

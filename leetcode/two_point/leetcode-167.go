@@ -1,23 +1,21 @@
 package two_point
 
-
 func twoSum(numbers []int, target int) []int {
 
-	i, j := 0, len(numbers) - 1
+	i, j := 0, len(numbers)-1
 	for i < j {
 		tmpSum := numbers[i] + numbers[j]
-		if tmpSum == target{
-			return []int{i+1, j+1}
-		} else if tmpSum < target{
+		if tmpSum == target {
+			return []int{i + 1, j + 1}
+		} else if tmpSum < target {
 			i++
-		}else{
+		} else {
 			j--
 		}
 	}
 	return []int{}
 
 }
-
 
 // '''
 // 167. 两数之和 II - 输入有序数组

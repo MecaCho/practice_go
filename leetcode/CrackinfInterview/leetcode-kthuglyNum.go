@@ -5,7 +5,6 @@ import (
 	"math"
 )
 
-
 func getKthMagicNumber(k int) int {
 	aNum, bNum, cNum := 0, 0, 0
 	res := []int{1}
@@ -16,10 +15,10 @@ func getKthMagicNumber(k int) int {
 		if min_num == res[aNum]*3 {
 			aNum++
 		}
-		if  min_num == res[bNum] * 5{
+		if min_num == res[bNum]*5 {
 			bNum++
 		}
-		if min_num == res[cNum] * 7{
+		if min_num == res[cNum]*7 {
 			cNum++
 		}
 		res = append(res, min_num)
@@ -54,10 +53,10 @@ func GetKthMagicNumber1(k int) int {
 		if min_num == res[aNum]*3 {
 			aNum++
 		}
-		if  min_num == res[bNum] * 5{
+		if min_num == res[bNum]*5 {
 			bNum++
 		}
-		if min_num == res[cNum] * 7{
+		if min_num == res[cNum]*7 {
 			cNum++
 		}
 		res = append(res, min_num)

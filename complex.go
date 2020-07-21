@@ -4,12 +4,12 @@ import (
 	"fmt"
 )
 
-var x complex128 = complex(1,2)
+var x complex128 = complex(1, 2)
 
 var y complex128 = complex(3, 4)
 
 const (
-	_ = uint64(1) << (10 * iota)
+	_   = uint64(1) << (10 * iota)
 	KiB //1024
 	MiB //1048576
 	GiB //1073741824
@@ -20,11 +20,11 @@ const (
 	YiB
 )
 
-func main()  {
+func main() {
 
-	fmt.Println(x*y)
-	fmt.Println(real(x*y))
-	fmt.Println(imag(x*y))
+	fmt.Println(x * y)
+	fmt.Println(real(x * y))
+	fmt.Println(imag(x * y))
 
 	// const IPv4Len = 4
 
