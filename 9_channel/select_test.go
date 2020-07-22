@@ -1,6 +1,8 @@
 package __channel
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestSelect(t *testing.T) {
 	Select()
