@@ -1,9 +1,22 @@
 package __Interface
 
+import (
+	"bytes"
+	"io"
+	"os"
+	"runtime"
+)
+
 type S struct {
 }
 
 func f(x interface{}) {
+	var w io.Writer
+	w = os.Stdout
+	w = new(bytes.Buffer)
+	// aa := &bytes.Buffer{}
+	// aa.
+	runtime.GOMAXPROCS(1)
 }
 
 func g(x *interface{}) {
@@ -21,3 +34,9 @@ func FuncParams() {
 	// ./interface_in_func_params.go:18:3: cannot use p (type *S) as type *interface {} in argument to g:
 	// 	*interface {} is pointer to interface, not interface
 }
+
+// var w io.Writer = os.Stdout
+
+// ff, ok := w.(*os.File)
+// bb, ok := w.(*bytes.Buffer)
+

@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	_ "net/http/pprof"
-	"runtime"
 	"time"
 )
 
@@ -89,7 +88,7 @@ func main() {
 		}
 	}()
 	time.Sleep(time.Millisecond)
-	runtime.GC()
+	// runtime.GC()
 	println("OK")
 }
 
