@@ -32,6 +32,7 @@ func (f *myFlag) Set(s string) (err error){
 	errors.New()
 	http.Handler()
 	http.ListenAndServe()
+	fmt.Sprint()
 	var id int
 	var name string
 	fmt.Sscanf(s, "%d%s", &id, &name)
