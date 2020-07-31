@@ -22,11 +22,20 @@ func DeferReturn() {
 }
 
 func Deferstack() {
+
 	defer func() { fmt.Println("打印前") }()
 	defer func() { fmt.Println("打印中") }()
 	defer func() { fmt.Println("打印后") }()
 
 	panic("触发异常")
+	return
+	// 	=== RUN   TestDeferstack2
+	// 打印后
+	// 打印中
+	// 打印前
+	// --- FAIL: TestDeferstack2 (0.00s)
+	// panic: 触发异常 [recovered]
+	//	panic: 触发异常
 }
 
 func calc(index string, a, b int) int {
@@ -52,7 +61,11 @@ func DeferFunc1(i int) (t int) {
 		t += 3
 		fmt.Println("t in defer1: ", t)
 	}()
+	t += 3
 	return t
+	// === RUN   TestDeferFunc1
+	// t in defer1:  7
+	// 7
 
 	// t in defer1:  4
 	// t in func result: 4

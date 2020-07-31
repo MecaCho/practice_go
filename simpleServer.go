@@ -34,6 +34,12 @@ func WaitForServer(url string) error {
 }
 
 func helloworld(w http.ResponseWriter, r *http.Request) {
+	if err := WaitForServer(url); err != nil {
+		fmt.Fprintf(os.Stderr, "Site is down: %v\n", err)
+		os.Exit(1)
+		log.Fatalf("Site is down : %v\n", err)
+	}
+
 	// w.Write([]byte("hello world\n"))
 	io.WriteString(w, "hello world\n")
 	// _, err := os.Open("xxx")

@@ -3,14 +3,81 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"io/ioutil"
 	"os"
-	"strings"
+	"reflect"
+	"unsafe"
 )
 
-func main() {
-	DupLinesInFiles()
+// func main() {
+// 	DupLinesInFiles()
+// }
+
+// package main
+//
+// import (
+// "fmt"
+// "runtime"
+// )
+
+func reverse(a []int) {
+	length := len(a)
+	for i := 0; i < length/2; i++ {
+		tmp := a[i]
+		a[i] = a[length-i-1]
+		a[length-i-1] = tmp
+	}
 }
+
+func main() {
+	a := []int{1, 2}
+	b := []int{3, 4}
+	check := a
+	a = b
+	addA := (*reflect.SliceHeader)(unsafe.Pointer(&a))
+	addB := (*reflect.SliceHeader)(unsafe.Pointer(&b))
+	addCheck := (*reflect.SliceHeader)(unsafe.Pointer(&check))
+
+	fmt.Println(&addA.Data, &addB.Data, &addCheck.Data)
+	fmt.Println(a, b, check)
+	// [3, 4], [3, 4], [1, 2]
+	example2()
+}
+
+func example2() {
+	a := []int{1, 2}
+	b := []int{3, 4}
+	check := a
+	copy(a, b)
+	addA := (*reflect.SliceHeader)(unsafe.Pointer(&a))
+	addB := (*reflect.SliceHeader)(unsafe.Pointer(&b))
+	addCheck := (*reflect.SliceHeader)(unsafe.Pointer(&check))
+
+	fmt.Println(&addA.Data, &addB.Data, &addCheck.Data)
+	// fmt.Println(&a, &b, &check)
+	fmt.Println(a, b, check)
+	// [3, 4], [3, 4], [3, 4]
+}
+
+// func main() {
+// 	a := []int{1, 2, 3}
+// 	reverse(a)
+// 	fmt.Println(a)
+// 	// Output: [3 2 1]
+// }
+
+// func main() {
+// 	runtime.GOMAXPROCS(1)
+// 	int_chan := make(chan int, 1)
+// 	string_chan := make(chan string, 1)
+// 	int_chan <- 1
+// 	string_chan <- "hello"
+// 	select {
+// 	case value := <-int_chan:
+// 		fmt.Println(value)
+// 	case value := <-string_chan:
+// 		panic(value)
+// 	}
+// }
 
 func DupLinesInFiles() {
 	counts := make(map[string]int)

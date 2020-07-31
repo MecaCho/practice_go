@@ -1,6 +1,9 @@
 package __baseDataType
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestDeferReturn(t *testing.T) {
 	DeferReturn()
@@ -18,7 +21,16 @@ func TestDeferFun(t *testing.T) {
 	DeferFun()
 }
 
+func TestDeferFunc1(t *testing.T) {
+	res := DeferFunc1(1)
+	fmt.Println(res)
+}
+
 func TestVarInDefer(t *testing.T) {
 	VarInDefer()
 	VarInDefer1()
+}
+
+func TestDeferstack2(t *testing.T) {
+	Deferstack()
 }
