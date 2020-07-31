@@ -4,8 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"reflect"
-	"unsafe"
 )
 
 // func main() {
@@ -33,11 +31,7 @@ func main() {
 	b := []int{3, 4}
 	check := a
 	a = b
-	addA := (*reflect.SliceHeader)(unsafe.Pointer(&a))
-	addB := (*reflect.SliceHeader)(unsafe.Pointer(&b))
-	addCheck := (*reflect.SliceHeader)(unsafe.Pointer(&check))
 
-	fmt.Println(&addA.Data, &addB.Data, &addCheck.Data)
 	fmt.Println(a, b, check)
 	// [3, 4], [3, 4], [1, 2]
 	example2()
@@ -48,14 +42,16 @@ func example2() {
 	b := []int{3, 4}
 	check := a
 	copy(a, b)
-	addA := (*reflect.SliceHeader)(unsafe.Pointer(&a))
-	addB := (*reflect.SliceHeader)(unsafe.Pointer(&b))
-	addCheck := (*reflect.SliceHeader)(unsafe.Pointer(&check))
 
-	fmt.Println(&addA.Data, &addB.Data, &addCheck.Data)
 	// fmt.Println(&a, &b, &check)
 	fmt.Println(a, b, check)
 	// [3, 4], [3, 4], [3, 4]
+
+	// addA := (*reflect.SliceHeader)(unsafe.Pointer(&a))
+	// addB := (*reflect.SliceHeader)(unsafe.Pointer(&b))
+	// addCheck := (*reflect.SliceHeader)(unsafe.Pointer(&check))
+	//
+	// fmt.Println(&addA.Data, &addB.Data, &addCheck.Data)
 }
 
 // func main() {
