@@ -1,6 +1,9 @@
 package __baseDataType
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 func CopyAndDeepCopy() {
 	a := []int{1, 2}
@@ -40,4 +43,5 @@ func CopySlice1() {
 	fmt.Println(a, b)
 	a[0] = 100
 	fmt.Println(a, b)
+	runtime.NumGoroutine()
 }

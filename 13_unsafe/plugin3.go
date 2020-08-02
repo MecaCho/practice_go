@@ -1,4 +1,4 @@
-package main
+package _3_unsafe
 
 import (
 	"fmt"
@@ -6,14 +6,14 @@ import (
 )
 
 func init() {
-	log.Println("plugin2 init ....")
+	log.Println("plugin3 init ....")
 }
 
-type Plugin2 struct {
+type Plugin3 struct {
 	Name string
 }
 
-func (p Plugin2) DoLabelTask() error {
+func (p Plugin3) DoRiskPortTask() error {
 	log.Println(fmt.Sprintf("Plugin %s working ...", p.Name))
 	return nil
 }
@@ -21,4 +21,4 @@ func (p Plugin2) DoLabelTask() error {
 //go build -buildmode=plugin -o=plugin1.so plugin1.go
 
 // exported as symbol named "Doctor"
-var PluginLabel = Plugin2{"label"}
+var PluginRiskPort = Plugin3{"riskport"}

@@ -1,12 +1,11 @@
-package __base
+package __helloworld
 
 import "fmt"
 
-func Point()  {
+func Point() {
 
 	x := 1
 	y := &x
-
 
 	fmt.Println(x, *y, y)
 	x = 2

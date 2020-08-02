@@ -1,4 +1,4 @@
-package main
+package _3_unsafe
 
 import (
 	"fmt"
@@ -10,21 +10,21 @@ import (
 
 func ServerHandle1(w http.ResponseWriter, r *http.Request) {
 
-	UsePlugin1()
+	main.UsePlugin1()
 
 	w.Write([]byte(fmt.Sprintf("hello, goroutine num %+v, time now: %+v\n", runtime.NumGoroutine(), time.Now())))
 }
 
 func ServerHandle2(w http.ResponseWriter, r *http.Request) {
 
-	UsePlugin2()
+	main.UsePlugin2()
 
 	w.Write([]byte(fmt.Sprintf("hello, goroutine num %+v, time now: %+v\n", runtime.NumGoroutine(), time.Now())))
 }
 
 func ServerHandle3(w http.ResponseWriter, r *http.Request) {
 
-	UsePlugin3()
+	main.UsePlugin3()
 
 	w.Write([]byte(fmt.Sprintf("hello, goroutine num %+v, time now: %+v\n", runtime.NumGoroutine(), time.Now())))
 }

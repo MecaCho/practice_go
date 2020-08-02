@@ -1,4 +1,4 @@
-package __base
+package __helloworld
 
 import "testing"
 

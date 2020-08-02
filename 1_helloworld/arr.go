@@ -1,9 +1,9 @@
-package __base
+package __helloworld
 
 import (
 	"fmt"
 	"unsafe"
-	)
+)
 
 func Arr() {
 	c := make(chan int)
@@ -15,13 +15,13 @@ func Arr() {
 	fmt.Println(arr, arr0)
 }
 
-func Matrix()  {
+func Matrix() {
 	fmt.Println("Size of int: ", unsafe.Sizeof(int(0)))
-	matirx := [2][3]int{[3]int{1,2,3}, [3]int{4,5,6}}
+	matirx := [2][3]int{[3]int{1, 2, 3}, [3]int{4, 5, 6}}
 
-	for i, v := range matirx{
+	for i, v := range matirx {
 
-		for j, vv := range v{
+		for j, vv := range v {
 			fmt.Println(vv)
 			fmt.Println(i, j, matirx[i][j], &matirx[i][j])
 		}
