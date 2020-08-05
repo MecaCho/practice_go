@@ -1,4 +1,4 @@
-package main
+package leetcode
 
 import (
 	"fmt"
@@ -31,7 +31,7 @@ func MergeArrr(arr1, arr2 []int) []int {
 
 }
 
-func main() {
+func FiveGroutinue() {
 	// //  100个任务
 	// //  5个线程
 	chans := make(chan int, 5)
@@ -40,20 +40,19 @@ func main() {
 	done := make(chan int)
 
 	fmt.Println("hello")
-	go func(){
-		for i := 0; i < 100; i++{
+	go func() {
+		for i := 0; i < 100; i++ {
 			//tasks = append(tasks, i)
-			chans<-i
+			chans <- i
 		}
 	}()
 
-
-	go func(){
+	go func() {
 		for {
 			res := <-chans
 			fmt.Println(res)
-			if res >= 99{
-				done<-1
+			if res >= 99 {
+				done <- 1
 			}
 
 		}

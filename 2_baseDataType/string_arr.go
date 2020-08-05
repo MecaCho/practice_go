@@ -14,10 +14,12 @@ func StringIndex() {
 
 	s := "abcdefg"
 	// s[1] = "1"
+	// Cannot assign to s[1]
 
 	sBytes := []byte(s)
 	sBytes[0] = []byte("Q")[0]
 	fmt.Println(sBytes, string(sBytes))
+	// [81 98 99 100 101 102 103] Qbcdefg
 
 	sRunes := []rune(s)
 	sRunes[0] = []rune("在")[0]

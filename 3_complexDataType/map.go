@@ -148,6 +148,6 @@ func MapPointer() {
 func MapNoPointer() {
 	nodes := make(map[int]Node)
 	nodes[1] = Node{123, "test"}
-	nodes[1].Name = "new_name"
+	// nodes[1].Name = "new_name"
 	// 	Cannot assign to nodes[1].Name
 }

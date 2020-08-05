@@ -4,7 +4,6 @@ import (
 	"fmt"
 	__channel "go_practice/9_channel"
 	"go_practice/leetcode"
-	_ "go_practice/leetcode"
 	"sync"
 )
 
