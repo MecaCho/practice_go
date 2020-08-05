@@ -133,3 +133,21 @@ func MapEqueal() {
 	fmt.Println(res)
 
 }
+
+type Node struct {
+	ID   int
+	Name string
+}
+
+func MapPointer() {
+	nodes := make(map[int]*Node)
+	nodes[1] = &Node{123, "test"}
+	nodes[1].Name = "new_name"
+}
+
+func MapNoPointer() {
+	nodes := make(map[int]Node)
+	nodes[1] = Node{123, "test"}
+	nodes[1].Name = "new_name"
+	// 	Cannot assign to nodes[1].Name
+}
