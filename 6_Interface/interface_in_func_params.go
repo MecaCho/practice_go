@@ -39,4 +39,3 @@ func FuncParams() {
 
 // ff, ok := w.(*os.File)
 // bb, ok := w.(*bytes.Buffer)
-

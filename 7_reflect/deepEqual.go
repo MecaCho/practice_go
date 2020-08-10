@@ -1,11 +1,11 @@
 package __reflect
 
 import (
-	"reflect"
 	"fmt"
+	"reflect"
 )
 
-func IsEqual()  {
+func IsEqual() {
 
 	var map1, map2 map[string]int = nil, make(map[string]int)
 	res := reflect.DeepEqual(map1, map2)

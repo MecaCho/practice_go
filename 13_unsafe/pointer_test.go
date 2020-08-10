@@ -1,9 +1,9 @@
 package _3_unsafe
 
 import (
-	"testing"
 	"fmt"
 	"reflect"
+	"testing"
 	"unsafe"
 )
 

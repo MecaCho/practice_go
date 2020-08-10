@@ -1,8 +1,8 @@
 package greedy
 
 import (
-	"sort"
 	"fmt"
+	"sort"
 )
 
 func MaxEvents(events [][]int) int {
@@ -16,9 +16,9 @@ func MaxEvents(events [][]int) int {
 
 	attends := [100000]int{0}
 
-	for _, event := range events{
-		for i := event[0]; i <= event[1]; i++{
-			if attends[i] == 0{
+	for _, event := range events {
+		for i := event[0]; i <= event[1]; i++ {
+			if attends[i] == 0 {
 				attends[i] = 1
 				break
 			}
@@ -27,14 +27,10 @@ func MaxEvents(events [][]int) int {
 
 	res := 0
 
-	for k := range attends{
+	for k := range attends {
 		res += attends[k]
 	}
 
-
 	return res
 
-
 }
-
-

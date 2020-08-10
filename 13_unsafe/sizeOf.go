@@ -29,14 +29,13 @@ var stringTest string
 
 var mapTest map[int]int
 
-var funcTest  func()
+var funcTest func()
 
 var chanTest chan int
 
 var interfaceTest interface{}
 
-
-func SizeOf()  {
+func SizeOf() {
 
 	fmt.Println("Size of float64: ", unsafe.Sizeof(float64(0)))
 
