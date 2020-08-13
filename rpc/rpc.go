@@ -23,7 +23,7 @@ type HelloService struct {
 
 func (h *HelloService) HelloWorld(request string, reply *string) error {
 	*reply = fmt.Sprintf("hello: %s.", request)
-	fmt.Println(reply)
+	fmt.Println("reply: ", *reply)
 	return nil
 }
 
