@@ -1,4 +1,4 @@
-package main
+package goroutine
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func fetch(url string, ch chan<- string) {
+func fetchAll(url string, ch chan<- string) {
 	start := time.Now()
 	resp, err := http.Get(url)
 	if err != nil {

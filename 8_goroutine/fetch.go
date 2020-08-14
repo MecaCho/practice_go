@@ -1,4 +1,4 @@
-package main
+package goroutine
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-func main() {
+func fetch() {
 
 	for _, url := range os.Args[1:] {
 		resp, err := http.Get(url)
