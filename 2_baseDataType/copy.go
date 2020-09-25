@@ -32,8 +32,10 @@ func CopySlice() {
 	b := []int{4, 5, 6}
 	copy(a, b)
 	fmt.Println(a, b)
+	// // [4 5 6] [4 5 6]
 	a[0] = 100
 	fmt.Println(a, b)
+	// [100 5 6] [4 5 6]
 }
 
 func CopySlice1() {
@@ -41,7 +43,9 @@ func CopySlice1() {
 	b := []int{4, 5, 6}
 	b = a
 	fmt.Println(a, b)
+	// [1 2 3] [1 2 3]
 	a[0] = 100
 	fmt.Println(a, b)
+	// [100 2 3] [100 2 3]
 	runtime.NumGoroutine()
 }
