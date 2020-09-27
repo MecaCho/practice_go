@@ -11,3 +11,7 @@ func TestDeferTest(t *testing.T) {
 func TestCapOfSlice(t *testing.T) {
 	CapOfSlice()
 }
+
+func TestSliceTest(t *testing.T) {
+	SliceTest()
+}

@@ -21,7 +21,7 @@ func init() {
 }
 
 func main() {
-	sliceTest()
+	SliceTest()
 	leetcode.GetCode()
 	leetcode.AddTest()
 	leetcode.InitChannel()
@@ -122,7 +122,7 @@ func proc() {
 
 }
 
-func sliceTest() {
+func SliceTest() {
 	s := make([]int, 5)
 	fmt.Printf("slice len: %d, cap: %d\n", len(s), cap(s))
 	s = append(s, 1, 2, 3)
