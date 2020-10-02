@@ -108,15 +108,46 @@ func TestSliceTest5(t *testing.T) {
 }
 
 func TestSliceAppend2(t *testing.T) {
+
 	s := []int{0,1,2,3,4,5,6}
 
+	fmt.Printf("slice s, len: %d, cap: %d, value: %+v, address: %p.\n", len(s), cap(s), s, s)
+
 	s1 := s[2:4]
-	fmt.Printf("slice init, len: %d, cap: %d, value: %+v, address: %p.\n", len(s5), cap(s5), s5, s5)
+	fmt.Printf("slice s1, len: %d, cap: %d, value: %+v, address: %p.\n", len(s1), cap(s1), s1, s1)
 
+	s2 := s[2:5]
+	fmt.Printf("slice s2, len: %d, cap: %d, value: %+v, address: %p.\n", len(s2), cap(s2), s2, s2)
 
-	s2 := s[:]
-	fmt.Printf("slice init, len: %d, cap: %d, value: %+v, address: %p.\n", len(s2), cap(s2), s2, s2)
+	ss1 := s1[0:5]
+	fmt.Printf("slice ss1, len: %d, cap: %d, value: %+v, address: %p.\n", len(ss1), cap(ss1), ss1, ss1)
 
+	ss1 = append(ss1, 100)
+	fmt.Printf("slice ss1, len: %d, cap: %d, value: %+v, address: %p.\n", len(ss1), cap(ss1), ss1, ss1)
+	fmt.Printf("slice s, len: %d, cap: %d, value: %+v, address: %p.\n", len(s), cap(s), s, s)
 
+	s2 = append(s2, 101)
+	fmt.Printf("slice s2, len: %d, cap: %d, value: %+v, address: %p.\n", len(s2), cap(s2), s2, s2)
 
+	s2 = append(s2, 100)
+	fmt.Printf("slice s2, len: %d, cap: %d, value: %+v, address: %p.\n", len(s2), cap(s2), s2, s2)
+
+	s2 = append(s2, 100)
+	fmt.Printf("slice s2, len: %d, cap: %d, value: %+v, address: %p.\n", len(s2), cap(s2), s2, s2)
+
+	s2 = append(s2, 100)
+	fmt.Printf("slice s2, len: %d, cap: %d, value: %+v, address: %p.\n", len(s2), cap(s2), s2, s2)
+
+	fmt.Printf("slice s, len: %d, cap: %d, value: %+v, address: %p.\n", len(s), cap(s), s, s)
+	// 	slice s, len: 7, cap: 7, value: [0 1 2 3 4 5 6], address: 0xc000106000.
+	// slice s1, len: 2, cap: 5, value: [2 3], address: 0xc000106010.
+	// slice s2, len: 3, cap: 5, value: [2 3 4], address: 0xc000106010.
+	// slice ss1, len: 5, cap: 5, value: [2 3 4 5 6], address: 0xc000106010.
+	// slice ss1, len: 6, cap: 10, value: [2 3 4 5 6 100], address: 0xc00010c000.
+	// slice s, len: 7, cap: 7, value: [0 1 2 3 4 5 6], address: 0xc000106000.
+	// slice s2, len: 4, cap: 5, value: [2 3 4 101], address: 0xc000106010.
+	// slice s2, len: 5, cap: 5, value: [2 3 4 101 100], address: 0xc000106010.
+	// slice s2, len: 6, cap: 10, value: [2 3 4 101 100 100], address: 0xc00010c050.
+	// slice s2, len: 7, cap: 10, value: [2 3 4 101 100 100 100], address: 0xc00010c050.
+	// slice s, len: 7, cap: 7, value: [0 1 2 3 4 101 100], address: 0xc000106000.
 }
