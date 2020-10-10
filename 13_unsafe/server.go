@@ -10,21 +10,21 @@ import (
 
 func ServerHandle1(w http.ResponseWriter, r *http.Request) {
 
-	main.UsePlugin1()
+	UsePlugin1()
 
 	w.Write([]byte(fmt.Sprintf("hello, goroutine num %+v, time now: %+v\n", runtime.NumGoroutine(), time.Now())))
 }
 
 func ServerHandle2(w http.ResponseWriter, r *http.Request) {
 
-	main.UsePlugin2()
+	UsePlugin2()
 
 	w.Write([]byte(fmt.Sprintf("hello, goroutine num %+v, time now: %+v\n", runtime.NumGoroutine(), time.Now())))
 }
 
 func ServerHandle3(w http.ResponseWriter, r *http.Request) {
 
-	main.UsePlugin3()
+	UsePlugin3()
 
 	w.Write([]byte(fmt.Sprintf("hello, goroutine num %+v, time now: %+v\n", runtime.NumGoroutine(), time.Now())))
 }

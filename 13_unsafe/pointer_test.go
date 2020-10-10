@@ -19,3 +19,8 @@ func TestBytesToString(t *testing.T) {
 	res1 := BytesToString(bytes)
 	fmt.Println(res1)
 }
+
+func TestStringToBytes(t *testing.T) {
+	c := 10
+	fmt.Println(*(*int)(unsafe.Pointer(uintptr(unsafe.Pointer(&c)) + uintptr(1))))
+}
