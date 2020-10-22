@@ -37,5 +37,10 @@ func TestBytesToString2(t *testing.T) {
 	for _, v := range s{
 		res = append(res, v)
 	}
+	fmt.Println(s)
+	s = append(s, 100)
+	fmt.Println(len(s), cap(s))
+	fmt.Println(s)
 	fmt.Println(res)
 }
+
