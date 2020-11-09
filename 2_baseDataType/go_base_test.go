@@ -109,7 +109,7 @@ func TestSliceTest5(t *testing.T) {
 
 func TestSliceAppend2(t *testing.T) {
 
-	s := []int{0,1,2,3,4,5,6}
+	s := []int{0, 1, 2, 3, 4, 5, 6}
 
 	fmt.Printf("slice s, len: %d, cap: %d, value: %+v, address: %p.\n", len(s), cap(s), s, s)
 

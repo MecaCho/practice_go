@@ -32,9 +32,9 @@ func TestStringToBytes(t *testing.T) {
 }
 
 func TestBytesToString2(t *testing.T) {
-	s := []int{1,2,3,4,5,6}
+	s := []int{1, 2, 3, 4, 5, 6}
 	res := []int{}
-	for _, v := range s{
+	for _, v := range s {
 		res = append(res, v)
 	}
 	fmt.Println(s)
@@ -43,4 +43,3 @@ func TestBytesToString2(t *testing.T) {
 	fmt.Println(s)
 	fmt.Println(res)
 }
-

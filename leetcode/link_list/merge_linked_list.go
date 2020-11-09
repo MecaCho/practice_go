@@ -1,8 +1,5 @@
 package link_list
 
-
-
-
 // type ListNode struct{
 // 	Val int
 // 	Next *ListNode
@@ -11,7 +8,7 @@ package link_list
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	var head, tail *ListNode
 
-	if l1==nil {
+	if l1 == nil {
 		return l2
 	}
 
@@ -26,7 +23,7 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	//循环,直到某一个链表已遍历完
-	for l1!= nil && l2 != nil {
+	for l1 != nil && l2 != nil {
 		//找到下一个节点,添加到新链表的尾
 		if l1.Val < l2.Val {
 			tail.Next, l1 = l1, l1.Next
@@ -38,7 +35,7 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	//剩下的节点字节拼接到新链表尾部
-	if l1!= nil {
+	if l1 != nil {
 		tail.Next = l1
 	}
 	if l2 != nil {
