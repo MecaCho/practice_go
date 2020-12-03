@@ -1,9 +1,5 @@
 package go_concurrency
 
-
-
-
-
 import (
 	"fmt"
 	"sync"
@@ -27,4 +23,3 @@ func Count() {
 	wg.Wait()
 	fmt.Println(count)
 }
-

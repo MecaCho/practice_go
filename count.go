@@ -2,6 +2,6 @@ package main
 
 import "go_practice/go_concurrency"
 
-func main()  {
+func Count() {
 	go_concurrency.Count()
 }

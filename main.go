@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"go_practice/fsnotify"
 	_ "net/http/pprof"
-	"time"
 )
 
 type Node struct {
@@ -81,15 +81,16 @@ func main() {
 	// // StartServer()
 	// log.Println(http.ListenAndServe("localhost:8081", nil))
 
-	go func() {
-		for {
-			// time.Sleep(1 * time.Second)
-			fmt.Println("hello")
-		}
-	}()
-	time.Sleep(time.Millisecond)
-	// runtime.GC()
-	println("OK")
+	// go func() {
+	// 	for {
+	// 		// time.Sleep(1 * time.Second)
+	// 		fmt.Println("hello")
+	// 	}
+	// }()
+	// time.Sleep(time.Millisecond)
+	// // runtime.GC()
+	// println("OK")
+	fsnotify.FsNotify("./")
 }
 
 //func main() {

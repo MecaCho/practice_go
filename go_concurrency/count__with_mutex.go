@@ -5,7 +5,6 @@ import (
 	"sync"
 )
 
-
 func CountWithMutex() {
 	// 互斥锁保护计数器
 	var mu sync.Mutex
