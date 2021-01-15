@@ -131,7 +131,7 @@ func VarInDefer() {
 func VarInDefer1() {
 
 	var i = 1
-	defer fmt.Println("result: ", func() int { return i * 2 }())
+	defer fmt.Println("result: ", func() int { return i * 3 }())
 	i++
 
 	startedAt := time.Now()

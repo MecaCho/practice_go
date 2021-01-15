@@ -13,7 +13,7 @@ import (
 // 	fmt.Println("你好, 世界!")
 // }
 
-func main() {
+func DupFunc() {
 
 	// fmt.Println(strings.Join(os.Args[1:], " "))
 	//
