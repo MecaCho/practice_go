@@ -19,6 +19,9 @@ func TestSliceTest(t *testing.T) {
 	SliceTest()
 }
 
+func TestAppendSlice(t *testing.T) {
+	AppendSlice20210122()
+}
 func TestDeferTest2(t *testing.T) {
 	DeferTest()
 }

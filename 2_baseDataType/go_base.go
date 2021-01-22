@@ -126,14 +126,33 @@ func SliceTest() {
 	s := make([]int, 5)
 	fmt.Printf("slice len: %d, cap: %d\n", len(s), cap(s))
 	s = append(s, 1, 2, 3)
-	fmt.Printf("slice len: %d, cap: %d", len(s), cap(s))
+	fmt.Printf("slice len: %d, cap: %d\n", len(s), cap(s))
 	fmt.Println(s)
 
-	s = make([]int, 5, 6)
-	fmt.Printf("slice len: %d, cap: %d\n", len(s), cap(s))
-	s = append(s, 1, 2, 3)
-	fmt.Printf("slice len: %d, cap: %d\n", len(s), cap(s))
+	s1 := make([]int, 5, 6)
+	fmt.Printf("slice len: %d, cap: %d\n", len(s1), cap(s1))
+	s1 = append(s1, 1, 2, 3)
+	fmt.Printf("slice len: %d, cap: %d\n", len(s1), cap(s1))
+	fmt.Println(s)
+}
 
+func AppendSlice20210122()  {
+
+	a := []int{7,8,9}
+	fmt.Printf("%+v\n", a)
+	ap(a)
+	fmt.Printf("%+v\n", a)
+	app(a)
+	fmt.Printf("%+v\n", a)
+
+}
+
+func ap(a []int)  {
+	a = append(a, 10)
+}
+
+func app(a []int)  {
+	a[0] = 10
 }
 
 func CapOfSlice() {
