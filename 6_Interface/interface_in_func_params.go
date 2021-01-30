@@ -2,6 +2,7 @@ package __Interface
 
 import (
 	"bytes"
+	"fmt"
 	"io"
 	"os"
 	"runtime"
@@ -12,6 +13,7 @@ type S struct {
 
 func f(x interface{}) {
 	var w io.Writer
+	fmt.Println(w)
 	w = os.Stdout
 	w = new(bytes.Buffer)
 	// aa := &bytes.Buffer{}
