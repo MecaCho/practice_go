@@ -10,7 +10,6 @@ func TestSyncPool(t *testing.T) {
 	// SyncPool(1000000000)
 }
 
-
 var bytepool = sync.Pool{
 	New: func() interface{} {
 		b := make([]byte, 1024)
@@ -19,11 +18,12 @@ var bytepool = sync.Pool{
 }
 
 func BenchmarkWithoutSyncPool(b *testing.B) {
-	for i := 0; i < b.N; i ++{
+	for i := 0; i < b.N; i++ {
 		obj := make([]byte, 1024)
 		_ = obj
 	}
 }
+
 // goos: darwin
 // goarch: amd64
 // pkg: go_practice/go_concurrency
@@ -37,25 +37,24 @@ func BenchmarkWithoutSyncPool(b *testing.B) {
 // PASS
 
 func BenchmarkWithSyncPool(b *testing.B) {
-	for i := 0; i < b.N; i ++{
+	for i := 0; i < b.N; i++ {
 		obj := bytePool.Get().(*[]byte)
 		_ = obj
 		bytePool.Put(obj)
 	}
 }
+
 // goos: darwin
 // goarch: amd64
 // pkg: go_practice/go_concurrency
 // BenchmarkWithSyncPool-16    	77769235	        14.0 ns/op
 // PASS
 
-
 // goos: darwin
 // goarch: amd64
 // pkg: go_practice/go_concurrency
 // BenchmarkWithSyncPool-16    	 3038128	       369 ns/op
 // PASS
-
 
 // goos: darwin
 // goarch: amd64
@@ -74,7 +73,7 @@ type Node struct {
 }
 
 var nodePool = sync.Pool{
-	New : func() interface{}{
+	New: func() interface{} {
 		return new(Node)
 	},
 }
@@ -83,7 +82,7 @@ func BenchmarkWithoutSyncPool1(b *testing.B) {
 	var node *Node
 	b.ReportAllocs()
 	b.ResetTimer()
-	for i := 0; i < b.N; i ++{
+	for i := 0; i < b.N; i++ {
 		// for j := 0; j < 10000; j ++{
 		// 	node = new(Node)
 		// 	node.Name = "test"
@@ -121,7 +120,7 @@ func BenchmarkWithSyncPool1(b *testing.B) {
 	var node *Node
 	b.ReportAllocs()
 	b.ResetTimer()
-	for i := 0; i < b.N; i ++{
+	for i := 0; i < b.N; i++ {
 		// for j := 0; j < 10000; j ++{
 		// 	node = nodePool.Get().(*Node)
 		// 	node.Name = "test"
@@ -132,6 +131,7 @@ func BenchmarkWithSyncPool1(b *testing.B) {
 		nodePool.Put(node)
 	}
 }
+
 // goos: darwin
 // goarch: amd64
 // pkg: go_practice/go_concurrency

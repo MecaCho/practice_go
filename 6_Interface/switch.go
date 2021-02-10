@@ -23,7 +23,7 @@ func GetInterfaceType(x interface{}) string {
 }
 
 func GetInt() int {
-	a := [...]int{5:3}
+	a := [...]int{5: 3}
 	fmt.Println(a)
 	return 1
 }

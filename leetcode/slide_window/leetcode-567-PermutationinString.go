@@ -44,8 +44,6 @@ package slide_window
 // 输入的字符串只包含小写字母
 // 两个字符串的长度都在 [1, 10,000] 之间
 
-
-
 func checkInclusion1(s1, s2 string) bool {
 	n, m := len(s1), len(s2)
 	if n > m {
@@ -73,26 +71,30 @@ func checkInclusion(s1 string, s2 string) bool {
 	counter1, counter2 := [26]int{}, [26]int{}
 	i := 0
 	length1, length2 := len(s1), len(s2)
-	if length1 > length2{
+	if length1 > length2 {
 		return false
 	}
 
 	for i, ch := range s1 {
-		counter1[ch - 'a'] += 1
-		counter2[s2[i] - 'a'] += 1
+		counter1[ch-'a'] += 1
+		counter2[s2[i]-'a'] += 1
 	}
 
-	if counter2 == counter1{
+	if counter2 == counter1 {
 		return true
 	}
 
-	for i = length1; i < length2; i++{
-		counter2[s2[i] - 'a'] += 1
-		counter2[s2[i-length1] - 'a'] -= 1
-		if counter2 == counter1{
+	for i = length1; i < length2; i++ {
+		counter2[s2[i]-'a'] += 1
+		counter2[s2[i-length1]-'a'] -= 1
+		if counter2 == counter1 {
 			return true
 		}
 	}
 
 	return false
+}
+
+func CheckInclusion(s1 string, s2 string) bool {
+	return checkInclusion(s1, s2)
 }

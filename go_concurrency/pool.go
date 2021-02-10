@@ -16,9 +16,9 @@ func newPool() interface{} {
 
 }
 
-func SyncPool(n int)  {
+func SyncPool(n int) {
 	s := time.Now().Unix()
-	for i := 0; i < n; i ++{
+	for i := 0; i < n; i++ {
 		obj := make([]byte, 1024)
 		_ = obj
 	}
@@ -27,7 +27,7 @@ func SyncPool(n int)  {
 	// fmt.Println("without pool: ", time.Since(s))
 
 	e2 := time.Now().Unix()
-	for j := 0; j < n; j++{
+	for j := 0; j < n; j++ {
 		obj := bytePool.Get().(*[]byte)
 		_ = obj
 		bytePool.Put(obj)

@@ -1,5 +1,5 @@
 package go_concurrency
 
-func Testfu()  {
-	
+func Testfu() {
+
 }

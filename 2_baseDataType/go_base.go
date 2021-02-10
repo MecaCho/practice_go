@@ -136,9 +136,9 @@ func SliceTest() {
 	fmt.Println(s)
 }
 
-func AppendSlice20210122()  {
+func AppendSlice20210122() {
 
-	a := []int{7,8,9}
+	a := []int{7, 8, 9}
 	fmt.Printf("%+v\n", a)
 	ap(a)
 	fmt.Printf("%+v\n", a)
@@ -147,11 +147,11 @@ func AppendSlice20210122()  {
 
 }
 
-func ap(a []int)  {
+func ap(a []int) {
 	a = append(a, 10)
 }
 
-func app(a []int)  {
+func app(a []int) {
 	a[0] = 10
 }
 
