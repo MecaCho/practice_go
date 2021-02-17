@@ -21,3 +21,4 @@ func TestCounterWithRedisLock(t *testing.T) {
 // Unlock success.
 // --- PASS: TestCounterWithRedisLock (0.01s)
 // PASS
+
