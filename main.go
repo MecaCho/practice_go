@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
-	"go_practice/fsnotify"
+	"log"
+	"net/http"
 	_ "net/http/pprof"
+	"runtime"
 )
 
 type Node struct {
@@ -73,13 +75,16 @@ func UsePlug() {
 }
 
 func main() {
+
+	// http.ListenAndServe("localhost:8001", nil)
 	// fmt.Println("")
 	// // UsePlug()
 	// UsePlugin1()
 	// UsePlugin2()
 	// UsePlugin3()
-	// // StartServer()
-	// log.Println(http.ListenAndServe("localhost:8081", nil))
+	// StartServer()
+	fmt.Println(runtime.NumCPU())
+	log.Println(http.ListenAndServe("localhost:8081", nil))
 
 	// go func() {
 	// 	for {
@@ -90,7 +95,7 @@ func main() {
 	// time.Sleep(time.Millisecond)
 	// // runtime.GC()
 	// println("OK")
-	fsnotify.FsNotify("./")
+	// fsnotify.FsNotify("./")
 }
 
 //func main() {
